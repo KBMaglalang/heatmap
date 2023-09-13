@@ -10,11 +10,11 @@ type Props = {
 
 function HomepageLayout({ children }: Props) {
   return (
-    <>
+    <div className="flex flex-col h-screen max-w-screen">
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }
 
