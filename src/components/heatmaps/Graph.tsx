@@ -24,7 +24,7 @@ export default function Graph({ commitsData }: Props) {
         value={commitsData}
         space={4}
         width={"w-full"}
-        rectSize={15}
+        rectSize={22}
         legendCellSize={0}
         startDate={new Date("2022/12/31")}
         endDate={new Date("2023/12/31")}

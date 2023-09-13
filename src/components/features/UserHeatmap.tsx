@@ -49,8 +49,8 @@ const tempData = [
 
 export default function UserHeatmap() {
   return (
-    <section className="text-gray-800 body-font">
-      <div className="container px-5 py-24 mx-auto">
+    <section className="text-gray-800 body-font ">
+      <div className="container px-5 py-24 mx-auto rounded-2xl">
         <div className="flex">
           {/* title */}
           <div className="flex flex-wrap w-full mb-20">
