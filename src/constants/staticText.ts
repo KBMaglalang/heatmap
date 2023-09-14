@@ -10,3 +10,6 @@ export const LINKEDIN_LINK = 'https://www.linkedin.com'
 // hero
 export const HERO_TITLE = 'Visualize Progress. Build Habits'
 export const HERO_DESC = 'Unlock the power of habit formation with a visual representation of your journey. Each dot signifies a commitment, a day conquered, a step closer to your goal. With ConsistChart, let every consistent effort be celebrated and magnified'
+
+// call to action
+export const CTA_PITCH = 'Ready to visualize your path to success? Join ConsistChart today and let every step of your journey shine brightly'
