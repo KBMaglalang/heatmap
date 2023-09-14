@@ -28,3 +28,21 @@ export const FEATURE_BENEFIT_3 = {
   title: 'Motivational Metrics',
   description: `Dive deep into your performance analytics, gaining insights that inspire and guide you to maintain consistency and reach new heights.`
 }
+
+// content steps
+export const CONTENT_STEP_1 = {
+  title: 'Create Your Graph',
+  description: 'Initiate your journey by crafting a new graph chart, inspired by the familiar GitHub commit design.'
+}
+export const CONTENT_STEP_2 = {
+  title: 'Log Your Achievement',
+  description: 'Record each task accomplishment, ensuring every effort is recognized on your habit journey.'
+}
+export const CONTENT_STEP_3 = {
+  title: 'Immediate Updates',
+  description: 'As you log, see real-time reflections on your heatmap, making every commitment shine.'
+}
+export const CONTENT_STEP_4 = {
+  title: 'Watch and Grow',
+  description: 'Observe the fruits of your persistence. As days turn into weeks, watch your progress tell its own story.'
+}
