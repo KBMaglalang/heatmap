@@ -1,15 +1,24 @@
 import React from "react";
 
+import {
+  FEATURE_TITLE,
+  FEATURE_BENEFIT_1,
+  FEATURE_BENEFIT_2,
+  FEATURE_BENEFIT_3,
+} from "@/constants/staticText";
+
 function HomepageFeatureSection() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
+        {/* title */}
         <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
-          Raw Denim Heirloom Man Braid
-          <br className="hidden sm:block" />
-          Selfies Wayfarers
+          {FEATURE_TITLE}
         </h1>
+
+        {/* benefits section */}
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+          {/* benefit 1 */}
           <div className="p-4 md:w-1/3 flex">
             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
               <svg
@@ -26,30 +35,15 @@ function HomepageFeatureSection() {
             </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                Shooting Stars
+                {FEATURE_BENEFIT_1.title}
               </h2>
               <p className="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard ugh iceland kickstarter tumblr
-                live-edge tilde.
+                {FEATURE_BENEFIT_1.description}
               </p>
-              <a className="mt-3 text-indigo-500 inline-flex items-center">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
             </div>
           </div>
+
+          {/* benefit 2 */}
           <div className="p-4 md:w-1/3 flex">
             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
               <svg
@@ -68,30 +62,15 @@ function HomepageFeatureSection() {
             </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                The Catalyzer
+                {FEATURE_BENEFIT_2.title}
               </h2>
               <p className="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard ugh iceland kickstarter tumblr
-                live-edge tilde.
+                {FEATURE_BENEFIT_2.description}
               </p>
-              <a className="mt-3 text-indigo-500 inline-flex items-center">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
             </div>
           </div>
+
+          {/* benefit 3 */}
           <div className="p-4 md:w-1/3 flex">
             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
               <svg
@@ -109,28 +88,11 @@ function HomepageFeatureSection() {
             </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                Neptune
+                {FEATURE_BENEFIT_3.title}
               </h2>
               <p className="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard ugh iceland kickstarter tumblr
-                live-edge tilde.
+                {FEATURE_BENEFIT_3.description}
               </p>
-              <a className="mt-3 text-indigo-500 inline-flex items-center">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
