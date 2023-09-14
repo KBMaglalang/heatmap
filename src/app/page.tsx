@@ -9,7 +9,7 @@ import HomepageContactForm from "@/components/features/HomepageContactForm";
 
 export default function Home() {
   return (
-    <main className="h-screen">
+    <main className="">
       {/* hero */}
       <HomepageHero />
 
