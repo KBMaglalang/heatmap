@@ -19,11 +19,11 @@ export default function Home() {
       {/* feature */}
       <HomepageFeatureSection />
 
-      {/* gallery */}
-      <HomepageGallery />
-
       {/* content */}
       <HomepageContent />
+
+      {/* gallery */}
+      <HomepageGallery />
 
       {/* contact form */}
       <HomepageContactForm />
