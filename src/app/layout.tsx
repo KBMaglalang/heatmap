@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 // components
 import HomepageLayout from "@/components/features/HomepageLayout";
-import ToastProvider from "@/components/ToastProvider";
+import ToastProvider from "@/providers/ToastProvider";
 
 export const metadata: Metadata = {
   title: "HeatMaps",
