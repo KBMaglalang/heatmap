@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 // components
 import HomepageLayout from "@/components/features/HomepageLayout";
+import ToastProvider from "@/providers/ToastProvider";
 
 export const metadata: Metadata = {
   title: "HeatMaps",
@@ -21,6 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ToastProvider />
+
         <HomepageLayout>{children}</HomepageLayout>
       </body>
     </html>
