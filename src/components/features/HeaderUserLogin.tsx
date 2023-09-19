@@ -1,13 +1,13 @@
-"use client";
-
 import React from "react";
-import { useSession } from "next-auth/react";
+
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 
 import SignInButton from "../common/SignInButton";
 import SignOutButton from "../common/SignOutButton";
 
-export default function HeaderUserLogin() {
-  const { data: session } = useSession();
+export default async function HeaderUserLogin() {
+  const session = await getServerSession(authOptions);
 
   return <>{!session ? <SignInButton /> : <SignOutButton />}</>;
 }
