@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+// import { getServerSession } from "next-auth";
+// import { authOptions } from "@/lib/auth";
 
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 // components
 import HomepageLayout from "@/components/features/HomepageLayout";
 import ToastProvider from "@/providers/ToastProvider";
-import { SessionProvider } from "@/providers/SessionProvider";
-import Login from "@/components/Login";
+// import { SessionProvider } from "@/providers/SessionProvider";
+// import Login from "@/components/Login";
 
 export const metadata: Metadata = {
   title: "HeatMaps",
@@ -23,12 +23,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions);
+  // const session = await getServerSession(authOptions);
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider session={session}>
+        <ToastProvider />
+        <HomepageLayout>{children}</HomepageLayout>
+
+        {/* <SessionProvider session={session}>
           {!session ? (
             <Login />
           ) : (
@@ -37,7 +40,7 @@ export default async function RootLayout({
               <HomepageLayout>{children}</HomepageLayout>
             </>
           )}
-        </SessionProvider>
+        </SessionProvider> */}
       </body>
     </html>
   );
