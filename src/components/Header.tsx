@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-import { ArrowRightIcon, UserIcon } from "@heroicons/react/24/outline";
-
 import { COMPANY_NAME } from "@/constants/staticText";
+
+// components
+import HeaderUserLogin from "./features/HeaderUserLogin";
 
 function Header() {
   return (
@@ -27,19 +28,21 @@ function Header() {
           </Link>
         </nav>
 
-        <Link href={"/signup"}>
+        {/* <Link href={"/signup"}>
           <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 mr-5">
             Sign Up
             <UserIcon className="w-4 h-4 ml-1" />
           </button>
-        </Link>
+        </Link> */}
 
-        <Link href={"/signin"}>
+        {/* <Link href={"/signin"}>
           <button className="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 text-white">
             Sign In
             <ArrowRightIcon className="w-4 h-4 ml-1" />
           </button>
-        </Link>
+        </Link> */}
+
+        <HeaderUserLogin />
       </div>
     </header>
   );
