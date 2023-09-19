@@ -6,7 +6,8 @@ import { signIn } from "next-auth/react";
 
 export default function SignInButton() {
   return (
-    <div onClick={() => signIn()}>
+    // <div onClick={() => signIn()}>
+    <div onClick={() => signIn("google")}>
       <button className="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 text-white">
         Sign In
         <ArrowRightIcon className="w-4 h-4 ml-1" />
