@@ -2,7 +2,6 @@
 
 import React from "react";
 import { redirect } from "next/navigation";
-import { useSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 
@@ -10,17 +9,6 @@ import { authOptions } from "@/lib/auth";
 import UserHeatmap from "@/components/features/UserHeatmap";
 
 export default async function UserPage() {
-  // const { status } = useSession({
-  //   required: true,
-  //   onUnauthenticated() {
-  //     redirect("/api/auth/signin");
-  //   },
-  // });
-
-  // if (status === "loading") {
-  //   return <p>Loading....</p>;
-  // }
-
   const session = await getServerSession(authOptions);
   if (!session) {
     redirect("/api/auth/signin");
