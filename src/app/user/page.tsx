@@ -1,19 +1,11 @@
 // "use client";
 
 import React from "react";
-import { redirect } from "next/navigation";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
 
 // components
 import UserHeatmap from "@/components/features/UserHeatmap";
 
 export default async function UserPage() {
-  const session = await getServerSession(authOptions);
-  if (!session) {
-    redirect("/api/auth/signin");
-  }
-
   return (
     <main className="h-screen">
       {/* title */}
