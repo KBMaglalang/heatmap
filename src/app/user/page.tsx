@@ -1,11 +1,11 @@
-"use client";
+// "use client";
 
 import React from "react";
 
 // components
 import UserHeatmap from "@/components/features/UserHeatmap";
 
-export default function UserPage() {
+export default async function UserPage() {
   return (
     <main className="h-screen">
       {/* title */}
