@@ -1,9 +1,10 @@
-// "use client";
-
 import React from "react";
 
 // components
 import UserHeatmap from "@/components/features/UserHeatmap";
+
+// ! test data
+import { tempData, tempFields } from "@/constants/heatmapTestData";
 
 export default async function UserPage() {
   return (
@@ -22,9 +23,9 @@ export default async function UserPage() {
       </div>
 
       {/* heat map lists */}
-      <div>
-        <UserHeatmap />
-      </div>
+      <>
+        <UserHeatmap fields={tempFields} data={tempData} />
+      </>
     </main>
   );
 }
