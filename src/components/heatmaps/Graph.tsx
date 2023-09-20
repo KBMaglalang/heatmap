@@ -4,9 +4,28 @@ import HeatMap from "@uiw/react-heat-map";
 
 type Props = {
   commitsData: { date: string; count: number }[];
+  userSetStartDate?: string;
+  useSetEndDate?: string;
 };
 
-export default function Graph({ commitsData }: Props) {
+import {
+  HEATMAP_WEEK_LABELS,
+  HEATMAP_LEGENDSIZE,
+  HEATMAP_RECTSIZE,
+  HEATMAP_SPACE,
+  HEATMAP_WIDTH,
+} from "@/constants/heatmapText";
+
+import { getStartDate } from "@/lib/heatmap/getStartDate";
+import { getEndDate } from "@/lib/heatmap/getEndDate";
+
+export default function Graph({
+  commitsData,
+  userSetStartDate,
+  useSetEndDate,
+}: Props) {
+  const startDate = getStartDate(commitsData);
+  // const endDate = getEndDate(commitsData);
   // const [size, setSize] = useState(0);
   // const [selected, setSelected] = useState("");
 
@@ -22,13 +41,17 @@ export default function Graph({ commitsData }: Props) {
       </label> */}
       <HeatMap
         value={commitsData}
-        space={4}
-        width={"w-full"}
-        rectSize={22}
-        legendCellSize={0}
-        startDate={new Date("2022/12/31")}
-        endDate={new Date("2023/12/31")}
-        weekLabels={["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]}
+        space={HEATMAP_SPACE}
+        width={HEATMAP_WIDTH}
+        rectSize={HEATMAP_RECTSIZE}
+        legendCellSize={HEATMAP_LEGENDSIZE}
+        startDate={
+          new Date(
+            userSetStartDate || startDate || `${new Date().getFullYear()}-01-01`
+          )
+        }
+        endDate={new Date(useSetEndDate || `${new Date().getFullYear()}-12-31`)}
+        weekLabels={HEATMAP_WEEK_LABELS}
         // panelColors={{
         //   0: "#f4decd",
         //   2: "#e4b293",
