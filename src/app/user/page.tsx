@@ -2,6 +2,7 @@ import React from "react";
 
 // components
 import UserHeatmap from "@/components/features/UserHeatmap";
+import NewButton from "@/components/heatmaps/NewButton";
 
 // ! test data
 import { tempData, tempFields } from "@/constants/heatmapTestData";
@@ -11,14 +12,15 @@ export default async function UserPage() {
     <main className="">
       {/* title */}
       <div className="container px-5 pt-24 mx-auto text-gray-600 body-font">
-        <div className="flex flex-wrap w-full mb-10 flex-col items-center text-center">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+        <div className="flex flex-wrap w-full mb-10 flex-col items-end text-center">
+          {/* <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
             Pitchfork Kickstarter Taxidermy
-          </h1>
-          <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
+          </h1> */}
+          {/* <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
             gentrify, subway tile poke farm-to-table.
-          </p>
+          </p> */}
+          <NewButton />
         </div>
       </div>
 
