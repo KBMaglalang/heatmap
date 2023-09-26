@@ -12,7 +12,7 @@ function HomepageLayout({ children }: Props) {
   return (
     <div className="flex flex-col h-screen max-w-screen">
       <Header />
-      {children}
+      <div className="flex-grow">{children}</div>
       <Footer />
     </div>
   );
