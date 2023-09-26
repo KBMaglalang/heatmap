@@ -8,7 +8,7 @@ import { tempData, tempFields } from "@/constants/heatmapTestData";
 
 export default async function UserPage() {
   return (
-    <main className="h-screen">
+    <main className="">
       {/* title */}
       <div className="container px-5 pt-24 mx-auto text-gray-600 body-font">
         <div className="flex flex-wrap w-full mb-10 flex-col items-center text-center">
