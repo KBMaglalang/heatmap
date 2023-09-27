@@ -2,15 +2,22 @@
 
 import React, { useState } from "react";
 import { PlusCircleIcon } from "@heroicons/react/20/solid";
+import { useSession } from "next-auth/react";
+import { Timestamp, collection, addDoc } from "firebase/firestore";
+import { db } from "../../../firebase";
 
 // components
 import NewModal from "./NewModal";
 
 export default function NewButton() {
+  const { data: session } = useSession();
   const [showModal, setShowModal] = useState(false);
 
-  const handleUpdateSettings = async () => {
-    // TODO: update settings
+  const handleUpdateSettings = async (data: any) => {
+    const doc = await addDoc(
+      collection(db, "users", session?.user?.email!, "heatmaps"),
+      { ...data, createdAt: Timestamp.now() }
+    );
   };
 
   return (
