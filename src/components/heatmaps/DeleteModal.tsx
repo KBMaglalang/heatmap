@@ -9,7 +9,7 @@ export default function DeleteModal({ setModalOpen, callback }: Props) {
   const handleAccept = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
-    // callback();
+    callback();
 
     setModalOpen(false);
   };
