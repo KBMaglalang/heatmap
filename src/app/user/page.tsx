@@ -5,6 +5,9 @@ import { useSession } from "next-auth/react";
 import { Timestamp, doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
 
+import { collection, orderBy, query } from "firebase/firestore";
+import { useCollection } from "react-firebase-hooks/firestore"; // ! setups a real time connection to the firebase database
+
 // components
 import UserHeatmap from "@/components/features/UserHeatmap";
 import NewButton from "@/components/heatmaps/NewButton";
@@ -44,6 +47,14 @@ export default function UserPage() {
     }
   }, [session]);
 
+  const [heatmaps, loading, error] = useCollection(
+    session &&
+      query(
+        collection(db, "users", session?.user?.email!, "heatmaps"),
+        orderBy("createdAt", "desc")
+      )
+  );
+
   return (
     <main className="">
       {/* title */}
@@ -61,7 +72,12 @@ export default function UserPage() {
       </div>
 
       {/* heat map lists */}
-      <>{/* <UserHeatmap fields={tempFields} data={tempData} /> */}</>
+      <div>
+        {!heatmaps?.empty &&
+          heatmaps?.docs?.map((heatmap) => (
+            <UserHeatmap key={heatmap.id} id={heatmap.id} />
+          ))}
+      </div>
     </main>
   );
 }
