@@ -3,12 +3,20 @@
 import React from "react";
 import { useSession } from "next-auth/react";
 import { useCollection, useDocument } from "react-firebase-hooks/firestore";
-import { collection, deleteDoc, doc, updateDoc } from "firebase/firestore";
+import {
+  Timestamp,
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 import { db } from "../../../firebase";
 
 // components
 import EditButton from "../heatmaps/EditButton";
 import DeleteButton from "../heatmaps/DeleteButton";
+import NewDataPointButton from "../heatmaps/NewDataPointButton";
 import Graph from "../heatmaps/Graph";
 
 type Props = {
@@ -29,16 +37,31 @@ export default function UserHeatmap({ id }: Props) {
   );
 
   // edit the information of a specific heatmap
-  const updateHeatmapInfo = (data: { title: string; description: string }) => {
-    updateDoc(doc(db, "users", session?.user?.email!, "heatmaps", id), {
+  const updateHeatmapInfo = async (data: {
+    title: string;
+    description: string;
+  }) => {
+    await updateDoc(doc(db, "users", session?.user?.email!, "heatmaps", id), {
       title: data.title || "Title",
       description: data.description || "",
     });
   };
 
   // delete heatmap
-  const deleteHeatmap = () => {
-    deleteDoc(doc(db, "users", session?.user?.email!, "heatmaps", id));
+  const deleteHeatmap = async () => {
+    await deleteDoc(doc(db, "users", session?.user?.email!, "heatmaps", id));
+  };
+
+  // add data point
+  const addDataPoint = async (data: { title: string; description: string }) => {
+    await addDoc(
+      collection(db, "users", session?.user?.email!, "heatmaps", id, "dates"),
+      {
+        date: Timestamp.now().toString(),
+        title: data.title,
+        description: data.description,
+      }
+    );
   };
 
   return (
@@ -60,6 +83,12 @@ export default function UserHeatmap({ id }: Props) {
 
           {/* user selection */}
           <div className="flex space-x-4 justify-between">
+            {/* new data point */}
+            <NewDataPointButton
+              heatmapDoc={heatmapDoc?.data()}
+              callback={addDataPoint}
+            />
+
             {/* pin */}
             {/* <ArrowUpOnSquareIcon className="h-4 w-4" /> */}
 
