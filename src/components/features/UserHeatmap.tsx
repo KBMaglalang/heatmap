@@ -36,6 +36,11 @@ export default function UserHeatmap({ id }: Props) {
     });
   };
 
+  // delete heatmap
+  const deleteHeatmap = () => {
+    deleteDoc(doc(db, "users", session?.user?.email!, "heatmaps", id));
+  };
+
   return (
     <section className="text-gray-800 body-font ">
       <div className="container px-5 py-24 mx-auto rounded-2xl">
@@ -66,7 +71,7 @@ export default function UserHeatmap({ id }: Props) {
             {/* <WrenchIcon className="h-4 w-4 text-gray-500 hover:text-gray-700 cursor-pointer" /> */}
 
             {/* delete */}
-            <DeleteButton />
+            <DeleteButton callback={deleteHeatmap} />
             {/* <TrashIcon className="h-4 w-4" /> */}
           </div>
         </div>
