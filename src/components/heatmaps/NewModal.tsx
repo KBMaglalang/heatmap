@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 type Props = {
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  callback: () => void;
+  callback: ({}) => void;
 };
 
 export default function NewModal({ setModalOpen, callback }: Props) {
+  const [heatmapTitle, setHeatmapTitle] = useState("");
+  const [heatmapDesc, setHeatmapDesc] = useState("");
+
   const handleAccept = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
-    // callback();
+    callback({
+      title: heatmapTitle,
+      description: heatmapDesc,
+    });
 
     setModalOpen(false);
   };
@@ -37,6 +43,8 @@ export default function NewModal({ setModalOpen, callback }: Props) {
                   type="text"
                   className="p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
                   placeholder="Title"
+                  value={heatmapTitle}
+                  onChange={(e) => setHeatmapTitle(e.target.value)}
                 />
               </div>
               {/* edit description */}
@@ -46,26 +54,28 @@ export default function NewModal({ setModalOpen, callback }: Props) {
                   type="text"
                   className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
                   placeholder="Description"
+                  value={heatmapDesc}
+                  onChange={(e) => setHeatmapDesc(e.target.value)}
                 />
               </div>
               {/* edit start date */}
-              <div className="flex flex-row justify-between items-center mt-2 w-full">
+              {/* <div className="flex flex-row justify-between items-center mt-2 w-full">
                 <span className="mr-4 text-xl font-bold">Start Date:</span>
                 <input
                   type="text"
                   className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
                   placeholder="Start Date"
                 />
-              </div>
+              </div> */}
               {/* edit end date */}
-              <div className="flex flex-row justify-between items-center mt-2 w-full">
+              {/* <div className="flex flex-row justify-between items-center mt-2 w-full">
                 <span className="mr-4 text-xl font-bold">End Date:</span>
                 <input
                   type="text"
                   className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
                   placeholder="End Date"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
