@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { WrenchIcon } from "@heroicons/react/24/outline";
+import { DocumentData } from "firebase/firestore";
 
 // components
 import EditModal from "./EditModal";
 
-export default function EditButton() {
-  const [showModal, setShowModal] = useState(false);
+type Props = {
+  heatmapDoc: DocumentData | undefined;
+  callback: (data: { title: string; description: string }) => void;
+};
 
-  const handleUpdateSettings = async () => {
-    // TODO: update settings
-  };
+export default function EditButton({ heatmapDoc, callback }: Props) {
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div>
@@ -19,8 +21,9 @@ export default function EditButton() {
 
       {showModal && (
         <EditModal
+          heatmapDoc={heatmapDoc}
           setModalOpen={setShowModal}
-          callback={handleUpdateSettings}
+          callback={callback}
         />
       )}
     </div>
