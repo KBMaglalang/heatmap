@@ -36,7 +36,7 @@ function HomepageHero() {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src={"/assets/images/hero-2.jpg"}
           />
         </div>
       </div>
