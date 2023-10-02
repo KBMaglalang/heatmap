@@ -1,26 +1,26 @@
 import React, { useState } from "react";
-import { WrenchIcon } from "@heroicons/react/24/outline";
+import { PlusCircleIcon } from "@heroicons/react/20/solid";
 import { DocumentData } from "firebase/firestore";
 
 // components
-import EditModal from "./EditModal";
+import NewDataPointModal from "./NewDataPointModal";
 
 type Props = {
   heatmapDoc: DocumentData | undefined;
   callback: (data: { title: string; description: string }) => void;
 };
 
-export default function EditButton({ heatmapDoc, callback }: Props) {
+export default function NewDataPointButton({ heatmapDoc, callback }: Props) {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <div>
       <div className="cursor-pointer" onClick={() => setShowModal(true)}>
-        <WrenchIcon className="h-4 w-4 text-gray-500 hover:text-gray-700 " />
+        <PlusCircleIcon className="h-4 w-4 text-gray-500 hover:text-gray-700 " />
       </div>
 
       {showModal && (
-        <EditModal
+        <NewDataPointModal
           heatmapDoc={heatmapDoc}
           setModalOpen={setShowModal}
           callback={callback}

@@ -4,12 +4,12 @@ import { TrashIcon } from "@heroicons/react/24/outline";
 // components
 import DeleteModal from "./DeleteModal";
 
-export default function DeleteButton() {
-  const [showModal, setShowModal] = useState(false);
+type Props = {
+  callback: () => void;
+};
 
-  const handleUpdateSettings = async () => {
-    // TODO: update settings
-  };
+export default function DeleteButton({ callback }: Props) {
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div>
@@ -18,10 +18,7 @@ export default function DeleteButton() {
       </div>
 
       {showModal && (
-        <DeleteModal
-          setModalOpen={setShowModal}
-          callback={handleUpdateSettings}
-        />
+        <DeleteModal setModalOpen={setShowModal} callback={callback} />
       )}
     </div>
   );

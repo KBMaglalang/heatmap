@@ -7,13 +7,13 @@ type Props = {
   callback: (data: { title: string; description: string }) => void;
 };
 
-export default function EditModal({
+export default function NewDataPointModal({
   heatmapDoc,
   setModalOpen,
   callback,
 }: Props) {
-  const [title, setTitle] = useState(heatmapDoc?.title);
-  const [description, setDescription] = useState(heatmapDoc?.description);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleAccept = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
@@ -40,7 +40,7 @@ export default function EditModal({
           {/* settings input or logout */}
           <div className="mt-3">
             <div className="flex flex-col mt-2 text-center">
-              <h4 className="mb-2 text-xl font-bold">Edit</h4>
+              <h4 className="mb-2 text-xl font-bold">New Data Point</h4>
 
               {/* edit title */}
               <div className="flex flex-row justify-between items-center mt-2 w-full">
@@ -64,24 +64,6 @@ export default function EditModal({
                   onChange={(e) => setDescription(e.target.value)}
                 />
               </div>
-              {/* edit start date */}
-              {/* <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl font-bold">Start Date:</span>
-                <input
-                  type="text"
-                  className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
-                  placeholder="Start Date"
-                />
-              </div> */}
-              {/* edit end date */}
-              {/* <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl font-bold">End Date:</span>
-                <input
-                  type="text"
-                  className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
-                  placeholder="End Date"
-                />
-              </div> */}
             </div>
           </div>
 
