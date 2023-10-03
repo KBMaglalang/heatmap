@@ -106,7 +106,7 @@ export default function UserHeatmap({ id }: Props) {
         </div>
 
         {/* heat map */}
-        {/* <Graph commitsData={data || []} /> */}
+        <Graph commitsData={[]} />
 
         {/* stats */}
         <div>
