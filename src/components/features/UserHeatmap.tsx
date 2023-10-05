@@ -10,14 +10,20 @@ import {
   deleteDoc,
   doc,
   updateDoc,
+  query,
+  orderBy,
 } from "firebase/firestore";
 import { db } from "../../../firebase";
+
+import { DAYS } from "@/constants/heatmapText";
+import { getWeekNumber } from "@/lib/heatmap/getWeekNumber";
 
 // components
 import EditButton from "../heatmaps/EditButton";
 import DeleteButton from "../heatmaps/DeleteButton";
 import NewDataPointButton from "../heatmaps/NewDataPointButton";
 import Graph from "../heatmaps/Graph";
+// import { database } from "firebase-admin";
 
 type Props = {
   id: string;
@@ -33,7 +39,10 @@ export default function UserHeatmap({ id }: Props) {
 
   // get the subcollection fields from firebase
   const [dates, datesLoading, datesmapError] = useCollection(
-    collection(db, "users", session?.user?.email!, "heatmaps", id, "dates")
+    query(
+      collection(db, "users", session?.user?.email!, "heatmaps", id, "dates"),
+      orderBy("weekOfYear", "asc")
+    )
   );
 
   // edit the information of a specific heatmap
@@ -54,12 +63,18 @@ export default function UserHeatmap({ id }: Props) {
 
   // add data point
   const addDataPoint = async (data: { title: string; description: string }) => {
+    const date = Timestamp.now().toDate();
+    const dayOfWeek = DAYS[date.getDay()];
+    const weekOfYear = getWeekNumber(date);
+
     await addDoc(
       collection(db, "users", session?.user?.email!, "heatmaps", id, "dates"),
       {
-        date: Timestamp.now().toString(),
+        createdAt: Timestamp.now(),
         title: data.title,
         description: data.description,
+        dayOfWeek: dayOfWeek,
+        weekOfYear: weekOfYear,
       }
     );
   };
@@ -82,31 +97,23 @@ export default function UserHeatmap({ id }: Props) {
           </div>
 
           {/* user selection */}
-          <div className="flex space-x-4 justify-between">
-            {/* new data point */}
+          <div className="flex space-x-4 justify-between relative z-1000">
             <NewDataPointButton
               heatmapDoc={heatmapDoc?.data()}
               callback={addDataPoint}
             />
 
-            {/* pin */}
-            {/* <ArrowUpOnSquareIcon className="h-4 w-4" /> */}
-
-            {/* edit */}
             <EditButton
               heatmapDoc={heatmapDoc?.data()}
               callback={updateHeatmapInfo}
             />
-            {/* <WrenchIcon className="h-4 w-4 text-gray-500 hover:text-gray-700 cursor-pointer" /> */}
 
-            {/* delete */}
             <DeleteButton callback={deleteHeatmap} />
-            {/* <TrashIcon className="h-4 w-4" /> */}
           </div>
         </div>
 
         {/* heat map */}
-        <Graph commitsData={[]} />
+        {!datesLoading && <Graph commitsData={dates || []} />}
 
         {/* stats */}
         <div>

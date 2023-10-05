@@ -1,6 +1,16 @@
-export const OPTION = {
+export const DAYS = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+export const CHART_OPTIONS = {
   stroke: {
-    width: 2,
+    width: 0,
   },
   // title: {
   //   text: "HeatMap Chart with Color Range",
@@ -15,22 +25,22 @@ export const OPTION = {
       40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52,
     ],
   },
-  yaxis: {
-    labels: {
-      formatter: function (val: any, index: any) {
-        const categories = [
-          "Saturday",
-          "Friday",
-          "Thurday",
-          "Wednesday",
-          "Tuesday",
-          "Monday",
-          "Sunday",
-        ];
-        return categories[index] || val;
-      },
-    },
-  },
+  // yaxis: {
+  //   labels: {
+  //     formatter: function (val: any, index: any) {
+  //       const categories = [
+  //         "Sunday",
+  //         "Monday",
+  //         "Tuesday",
+  //         "Wednesday",
+  //         "Thurday",
+  //         "Friday",
+  //         "Saturday",
+  //       ];
+  //       return categories[index] || val;
+  //     },
+  //   },
+  // },
   legend: {
     // show: false,
     // horizontalAlign: "center",
@@ -38,91 +48,39 @@ export const OPTION = {
   },
   plotOptions: {
     heatmap: {
-      shadeIntensity: 0.5,
+      // shadeIntensity: 1,
       radius: 5,
+      enableShades: false,
       // useFillColorAsStroke: true,
       // distributed: true,
       colorScale: {
         ranges: [
           {
             from: -30,
-            to: 5,
-            color: "#ADD8E6",
-            name: " ",
+            to: 0,
+            color: "#808080",
+            name: "None",
           },
           {
-            from: 6,
+            from: 1,
             to: 20,
-            color: "#0000FF",
-            name: " ",
+            color: "#0404cc",
+            name: "Low",
           },
           {
             from: 21,
-            to: 999,
+            to: 60,
             color: "#00008B",
-            name: " ",
+            name: "Medium",
+          },
+          {
+            from: 61,
+            to: 100,
+            color: "#000059",
+            name: "High",
           },
         ],
       },
     },
   },
 };
-
-export const SERIES = [
-  {
-    // name: "Sunday",
-    data: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22,
-      43, 43, 43, 43, 43, 43, 43, 43, 43, 22, 43, 43, 43, 43, 43, 43, 43, 43,
-      43, 22, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 100,
-    ],
-  },
-  {
-    // name: "Monday",
-    data: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22,
-      43, 43, 43, 43, 43, 43, 43, 43, 43, 22, 43, 43, 43, 43, 43, 43, 43, 43,
-      43, 22, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43,
-    ],
-  },
-  {
-    // name: "Tuesday",
-    data: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22,
-      43, 43, 43, 43, 43, 43, 43, 43, 43, 22, 43, 43, 43, 43, 43, 43, 43, 43,
-      43, 22, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43,
-    ],
-  },
-  {
-    // name: "Wednesday",
-    data: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22,
-      43, 43, 43, 43, 43, 43, 43, 43, 43, 22, 43, 43, 43, 43, 43, 43, 43, 43,
-      43, 22, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43,
-    ],
-  },
-  {
-    // name: "Thursday",
-    data: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22,
-      43, 43, 43, 43, 43, 43, 43, 43, 43, 22, 43, 43, 43, 43, 43, 43, 43, 43,
-      43, 22, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43,
-    ],
-  },
-  {
-    // name: "Friday",
-    data: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22,
-      43, 43, 43, 43, 43, 43, 43, 43, 43, 22, 43, 43, 43, 43, 43, 43, 43, 43,
-      43, 22, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43,
-    ],
-  },
-  {
-    // name: "Saturday",
-    data: [
-      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22,
-      43, 43, 43, 43, 43, 43, 43, 43, 43, 22, 43, 43, 43, 43, 43, 43, 43, 43,
-      43, 22, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43, 43,
-    ],
-  },
-];

@@ -16,7 +16,7 @@ export default function NewDataPointButton({ heatmapDoc, callback }: Props) {
   return (
     <div>
       <div className="cursor-pointer" onClick={() => setShowModal(true)}>
-        <PlusCircleIcon className="h-4 w-4 text-gray-500 hover:text-gray-700 " />
+        <PlusCircleIcon className="h-6 w-6 text-gray-500 hover:text-gray-700 " />
       </div>
 
       {showModal && (
