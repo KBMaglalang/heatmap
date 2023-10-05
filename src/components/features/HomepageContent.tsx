@@ -32,10 +32,12 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider font-brand-montserrat ">
                   {CONTENT_STEP_1.title}
                 </h2>
-                <p className="leading-relaxed">{CONTENT_STEP_1.description}</p>
+                <p className="leading-relaxed font-brand-montserrat font-regular">
+                  {CONTENT_STEP_1.description}
+                </p>
               </div>
             </div>
 
@@ -58,10 +60,12 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider font-brand-montserrat ">
                   {CONTENT_STEP_2.title}
                 </h2>
-                <p className="leading-relaxed">{CONTENT_STEP_2.description}</p>
+                <p className="leading-relaxed font-brand-montserrat font-regular">
+                  {CONTENT_STEP_2.description}
+                </p>
               </div>
             </div>
 
@@ -85,10 +89,12 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider font-brand-montserrat">
                   {CONTENT_STEP_3.title}
                 </h2>
-                <p className="leading-relaxed">{CONTENT_STEP_3.description}</p>
+                <p className="leading-relaxed font-brand-montserrat font-regular">
+                  {CONTENT_STEP_3.description}
+                </p>
               </div>
             </div>
 
@@ -109,10 +115,12 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider font-brand-montserrat">
                   {CONTENT_STEP_4.title}
                 </h2>
-                <p className="leading-relaxed">{CONTENT_STEP_4.description}</p>
+                <p className="leading-relaxed font-brand-montserrat font-regular">
+                  {CONTENT_STEP_4.description}
+                </p>
               </div>
             </div>
           </div>

@@ -5,10 +5,10 @@ function HomepageGallery() {
     <section className="text-brand-black body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black font-brand-roboto ">
             Master Cleanse Reliac Heirloom
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base font-brand-montserrat font-regular">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
             gentrify, subway tile poke farm-to-table. Franzen you probably
             haven't heard of them man bun deep jianbing selfies heirloom.
@@ -26,10 +26,10 @@ function HomepageGallery() {
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
                   THE SUBTITLE
                 </h2> */}
-                <h1 className="title-font text-lg font-medium text-brand-black mb-3">
+                <h1 className="title-font text-lg font-medium text-brand-black mb-3 font-brand-montserrat ">
                   Master Your Momentum
                 </h1>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed font-brand-montserrat font-regular">
                   Unlock the power of visual feedback with Consistency
                   Visualizer. As you see your efforts mapped out day by day,
                   harness the motivation to build, maintain, and elevate your
@@ -49,10 +49,10 @@ function HomepageGallery() {
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
                   THE SUBTITLE
                 </h2> */}
-                <h1 className="title-font text-lg font-medium text-brand-black mb-3">
+                <h1 className="title-font text-lg font-medium text-brand-black mb-3 font-brand-montserrat">
                   Consistency, Color-Coded
                 </h1>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed font-brand-montserrat font-regular">
                   Dive deep into a colorful representation of your daily drive.
                   With each hue, recognize your dedication, and be inspired to
                   add more to your canvas.
@@ -71,10 +71,10 @@ function HomepageGallery() {
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
                   THE SUBTITLE
                 </h2> */}
-                <h1 className="title-font text-lg font-medium text-brand-black mb-3">
+                <h1 className="title-font text-lg font-medium text-brand-black mb-3 font-brand-montserrat">
                   Visualize to Actualize
                 </h1>
-                <p className="leading-relaxed">
+                <p className="leading-relaxed font-brand-montserrat font-regular">
                   Every goal starts with consistent effort. Watch your
                   persistence unfold in a dynamic heatmap, propelling you to
                   commit, continue, and conquer.

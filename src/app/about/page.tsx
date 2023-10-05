@@ -9,7 +9,7 @@ export default function About() {
             <div className="w-24 h-full bg-indigo-500"></div>
           </div> */}
           <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 className="sm:w-2/5 text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0">
+            <h1 className="sm:w-2/5 text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0 font-brand-roboto">
               About ConsistChart
             </h1>
             {/* <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
@@ -20,7 +20,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 p-4">
+        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 p-4 font-brand-montserrat font-regular">
           <p className="text-base leading-relaxed mt-2">
             ConsistChart was born from a simple revelation: the immense
             satisfaction derived from seeing daily consistency visualized in a

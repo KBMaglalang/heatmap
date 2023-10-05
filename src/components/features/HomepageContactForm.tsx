@@ -52,7 +52,7 @@ function HomepageContactForm() {
     <section className="text-brand-black body-font relative">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black font-brand-roboto">
             Contact Us
           </h1>
         </div>
@@ -64,7 +64,7 @@ function HomepageContactForm() {
                 <div className="relative">
                   <label
                     htmlFor="name"
-                    className="leading-7 text-sm text-brand-black"
+                    className="leading-7 text-sm text-brand-black font-brand-montserrat font-light"
                   >
                     Name
                   </label>
@@ -77,12 +77,14 @@ function HomepageContactForm() {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.name}
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
                   />
                 </div>
 
                 {formik.touched.name && formik.errors.name ? (
-                  <div className="text-red-500">{formik.errors.name}</div>
+                  <div className="text-red-500 font-brand-montserrat font-regular">
+                    {formik.errors.name}
+                  </div>
                 ) : null}
               </div>
 
@@ -91,7 +93,7 @@ function HomepageContactForm() {
                 <div className="relative">
                   <label
                     htmlFor="email"
-                    className="leading-7 text-sm text-brand-black"
+                    className="leading-7 text-sm text-brand-black font-brand-montserrat font-light"
                   >
                     Email
                   </label>
@@ -103,10 +105,12 @@ function HomepageContactForm() {
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="Email"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
                   />
                   {formik.touched.email && formik.errors.email ? (
-                    <div className="text-red-500">{formik.errors.email}</div>
+                    <div className="text-red-500 font-brand-montserrat font-regular">
+                      {formik.errors.email}
+                    </div>
                   ) : null}
                 </div>
               </div>
@@ -116,7 +120,7 @@ function HomepageContactForm() {
                 <div className="relative">
                   <label
                     htmlFor="message"
-                    className="leading-7 text-sm text-brand-black"
+                    className="leading-7 text-sm text-brand-black font-brand-montserrat font-light"
                   >
                     Message
                   </label>
@@ -127,10 +131,12 @@ function HomepageContactForm() {
                     onBlur={formik.handleBlur}
                     value={formik.values.message}
                     placeholder="Type a message..."
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-brand-black py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-brand-black py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
                   />
                   {formik.touched.message && formik.errors.message ? (
-                    <div className="text-red-500">{formik.errors.message}</div>
+                    <div className="text-red-500 font-brand-montserrat font-regular">
+                      {formik.errors.message}
+                    </div>
                   ) : null}
                 </div>
               </div>

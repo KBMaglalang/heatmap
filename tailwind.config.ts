@@ -15,6 +15,11 @@ const config: Config = {
         "brand-accent": "#E94E77",
         "brand-pair": "#50E3C2",
       },
+      fontFamily: {
+        "brand-roboto": ["Roboto", "sans"],
+        "brand-montserrat": ["Montserrat", "sans"],
+        "brand-merriweather": ["Merriweather", "sans"],
+      },
     },
   },
   plugins: [],
