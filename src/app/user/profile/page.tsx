@@ -36,10 +36,10 @@ export default function page() {
 
   return (
     <main className="">
-      <div className="container px-5 pt-24 mx-auto text-gray-600 body-font ">
+      <div className="container px-5 pt-24 mx-auto text-brand-black body-font ">
         <div className="mb-12">
           <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
               User and Account Settings
             </h1>
           </div>
@@ -48,7 +48,7 @@ export default function page() {
             {/* light and dark theme */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
                   Theme
                 </h1>
               </div>
@@ -64,7 +64,7 @@ export default function page() {
                     onClick={handleLightDarkToggle}
                   />
                   <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-                  <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                  <span className="ml-3 text-sm font-medium text-brand-black dark:text-gray-300">
                     {notificationsToggle ? "Dark" : "Light"}
                   </span>
                 </label>
@@ -74,7 +74,7 @@ export default function page() {
             {/* timezone settings */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
                   Timezone
                 </h1>
               </div>
@@ -90,7 +90,7 @@ export default function page() {
                   options={tempTimeZone}
                   // isLoading={isLoading}
                   menuPosition="fixed"
-                  className="mt-2 w-1/3"
+                  className="mt-2 w-1/3 "
                   // styles={{
                   //   control: (baseStyles) => ({
                   //     ...baseStyles,
@@ -123,7 +123,7 @@ export default function page() {
             {/* notifications */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
                   Notifications
                 </h1>
               </div>
@@ -139,7 +139,7 @@ export default function page() {
                   />
                   <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
 
-                  <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                  <span className="ml-3 text-sm font-medium text-brand-black dark:text-gray-300">
                     {notificationsToggle ? "On" : "Off"}
                   </span>
                 </label>
@@ -149,7 +149,7 @@ export default function page() {
             {/* account settings */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
                   Account Settings
                 </h1>
               </div>
@@ -161,7 +161,7 @@ export default function page() {
 
                   <input
                     type="text"
-                    className="p-2 my-2 rounded-lg resize-none border-2 w-1/3"
+                    className="w-1/3 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     placeholder="Name"
                     value={name}
                     onChange={handleUpdateName}
@@ -173,7 +173,7 @@ export default function page() {
             {/* delete account */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
                   Delete Account
                 </h1>
               </div>

@@ -9,10 +9,10 @@ import {
 
 function HomepageFeatureSection() {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-brand-black body-font">
       <div className="container px-5 py-24 mx-auto">
         {/* title */}
-        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">
+        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-brand-black mb-20">
           {FEATURE_TITLE}
         </h1>
 
@@ -20,7 +20,7 @@ function HomepageFeatureSection() {
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           {/* benefit 1 */}
           <div className="p-4 md:w-1/3 flex">
-            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-brand-interface mb-4 flex-shrink-0">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -34,7 +34,7 @@ function HomepageFeatureSection() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+              <h2 className="text-brand-black text-lg title-font font-medium mb-2">
                 {FEATURE_BENEFIT_1.title}
               </h2>
               <p className="leading-relaxed text-base">
@@ -45,7 +45,7 @@ function HomepageFeatureSection() {
 
           {/* benefit 2 */}
           <div className="p-4 md:w-1/3 flex">
-            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-brand-interface mb-4 flex-shrink-0">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -61,7 +61,7 @@ function HomepageFeatureSection() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+              <h2 className="text-brand-black text-lg title-font font-medium mb-2">
                 {FEATURE_BENEFIT_2.title}
               </h2>
               <p className="leading-relaxed text-base">
@@ -72,7 +72,7 @@ function HomepageFeatureSection() {
 
           {/* benefit 3 */}
           <div className="p-4 md:w-1/3 flex">
-            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+            <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-brand-interface mb-4 flex-shrink-0">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -87,7 +87,7 @@ function HomepageFeatureSection() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
+              <h2 className="text-brand-black text-lg title-font font-medium mb-2">
                 {FEATURE_BENEFIT_3.title}
               </h2>
               <p className="leading-relaxed text-base">

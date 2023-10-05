@@ -28,14 +28,16 @@ export default function DeleteModal({ setModalOpen, callback }: Props) {
           {/* settings input or logout */}
           <div className="mt-3">
             <div className="flex flex-col mt-2 text-center">
-              <h4 className="mb-2 text-xl font-bold">Delete</h4>
+              <h4 className="mb-2 text-xl font-bold text-brand-black">
+                Delete
+              </h4>
             </div>
           </div>
 
           {/* user selection */}
           <div className="gap-2 items-center mt-3 sm:flex">
             <button
-              className="w-full mt-2 p-2.5 flex-1 text-white bg-indigo-600 rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-gray-700"
+              className="w-full mt-2 p-2.5 flex-1 text-white bg-brand-interface rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-indigo-600"
               onClick={handleAccept}
             >
               Accept

@@ -6,11 +6,11 @@ import HomepageContactForm from "@/components/features/HomepageContactForm";
 export default function Contact() {
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-brand-black body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col">
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">
+              <h1 className="sm:w-2/5 text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0">
                 Reach Out to ConsistChart
               </h1>
             </div>

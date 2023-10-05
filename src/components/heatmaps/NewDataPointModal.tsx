@@ -39,17 +39,17 @@ export default function NewDataPointModal({
         <div className="relative w-full max-w-lg p-4 mx-auto rounded-md shadow-2xl  shadow-gray-700">
           {/* settings input or logout */}
           <div className="mt-3">
-            <div className="flex flex-col mt-2 ">
-              <h4 className="mb-2 text-xl font-bold text-center">
+            <div className="flex flex-col mt-2 text-brand-black">
+              <h4 className="mb-2 text-xl font-bold text-center text-brand-black">
                 New Data Point
               </h4>
 
               {/* edit title */}
-              <div className="flex flex-col justify-between mt-2 w-full">
+              <div className="flex flex-col justify-between mt-2 w-full text-brand-black">
                 <span className="mr-4 text-xl font-bold">Title:</span>
                 <input
                   type="text"
-                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none border-2"
+                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none border-2 text-brand-black"
                   placeholder="Title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
@@ -57,7 +57,9 @@ export default function NewDataPointModal({
               </div>
               {/* edit description */}
               <div className="flex flex-col mt-2 w-full">
-                <span className="mr-4 text-xl font-bold">Description:</span>
+                <span className="mr-4 text-xl font-bold text-brand-black">
+                  Description:
+                </span>
                 {/* <input
                   type="text"
                   className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
@@ -69,7 +71,7 @@ export default function NewDataPointModal({
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   rows={8}
-                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none  border-2"
+                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none  border-2 text-brand-black"
                   placeholder="Type your prompt here"
                 />
               </div>
@@ -79,7 +81,7 @@ export default function NewDataPointModal({
           {/* user selection */}
           <div className="gap-2 items-center mt-3 sm:flex">
             <button
-              className="w-full mt-2 p-2.5 flex-1 text-white bg-indigo-600 rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-gray-700"
+              className="w-full mt-2 p-2.5 flex-1 text-white bg-brand-interface rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-indigo-600"
               onClick={handleAccept}
             >
               Accept

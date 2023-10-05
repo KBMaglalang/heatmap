@@ -2,10 +2,10 @@ import React from "react";
 
 function HomepageGallery() {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-brand-black body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black">
             Master Cleanse Reliac Heirloom
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -26,7 +26,7 @@ function HomepageGallery() {
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
                   THE SUBTITLE
                 </h2> */}
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                <h1 className="title-font text-lg font-medium text-brand-black mb-3">
                   Master Your Momentum
                 </h1>
                 <p className="leading-relaxed">
@@ -49,7 +49,7 @@ function HomepageGallery() {
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
                   THE SUBTITLE
                 </h2> */}
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                <h1 className="title-font text-lg font-medium text-brand-black mb-3">
                   Consistency, Color-Coded
                 </h1>
                 <p className="leading-relaxed">
@@ -71,7 +71,7 @@ function HomepageGallery() {
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
                   THE SUBTITLE
                 </h2> */}
-                <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                <h1 className="title-font text-lg font-medium text-brand-black mb-3">
                   Visualize to Actualize
                 </h1>
                 <p className="leading-relaxed">
