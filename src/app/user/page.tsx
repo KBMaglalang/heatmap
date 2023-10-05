@@ -58,7 +58,7 @@ export default function UserPage() {
   return (
     <main className="">
       {/* title */}
-      <div className="container px-5 pt-24 mx-auto text-gray-600 body-font">
+      <div className="container px-5 pt-24 mx-auto text-brand-black body-font">
         <div className="flex flex-wrap w-full mb-10 flex-col items-end text-center">
           {/* <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
             Pitchfork Kickstarter Taxidermy

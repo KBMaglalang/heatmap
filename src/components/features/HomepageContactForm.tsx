@@ -49,10 +49,10 @@ function HomepageContactForm() {
   });
 
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="text-brand-black body-font relative">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black">
             Contact Us
           </h1>
         </div>
@@ -64,7 +64,7 @@ function HomepageContactForm() {
                 <div className="relative">
                   <label
                     htmlFor="name"
-                    className="leading-7 text-sm text-gray-600"
+                    className="leading-7 text-sm text-brand-black"
                   >
                     Name
                   </label>
@@ -77,7 +77,7 @@ function HomepageContactForm() {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.name}
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
 
@@ -91,7 +91,7 @@ function HomepageContactForm() {
                 <div className="relative">
                   <label
                     htmlFor="email"
-                    className="leading-7 text-sm text-gray-600"
+                    className="leading-7 text-sm text-brand-black"
                   >
                     Email
                   </label>
@@ -103,7 +103,7 @@ function HomepageContactForm() {
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="Email"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                   {formik.touched.email && formik.errors.email ? (
                     <div className="text-red-500">{formik.errors.email}</div>
@@ -116,7 +116,7 @@ function HomepageContactForm() {
                 <div className="relative">
                   <label
                     htmlFor="message"
-                    className="leading-7 text-sm text-gray-600"
+                    className="leading-7 text-sm text-brand-black"
                   >
                     Message
                   </label>
@@ -127,7 +127,7 @@ function HomepageContactForm() {
                     onBlur={formik.handleBlur}
                     value={formik.values.message}
                     placeholder="Type a message..."
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-brand-black py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   />
                   {formik.touched.message && formik.errors.message ? (
                     <div className="text-red-500">{formik.errors.message}</div>
@@ -140,7 +140,7 @@ function HomepageContactForm() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                  className="flex mx-auto text-white bg-brand-interface border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
                 >
                   {loading ? "Sending..." : "Send Message"}
                 </button>

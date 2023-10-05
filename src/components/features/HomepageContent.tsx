@@ -9,7 +9,7 @@ import {
 
 function HomepageContent() {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-brand-black body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
@@ -18,7 +18,7 @@ function HomepageContent() {
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-interface inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -32,7 +32,7 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
                   {CONTENT_STEP_1.title}
                 </h2>
                 <p className="leading-relaxed">{CONTENT_STEP_1.description}</p>
@@ -44,7 +44,7 @@ function HomepageContent() {
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-interface inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -58,7 +58,7 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
                   {CONTENT_STEP_2.title}
                 </h2>
                 <p className="leading-relaxed">{CONTENT_STEP_2.description}</p>
@@ -70,7 +70,7 @@ function HomepageContent() {
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-interface inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -85,7 +85,7 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
                   {CONTENT_STEP_3.title}
                 </h2>
                 <p className="leading-relaxed">{CONTENT_STEP_3.description}</p>
@@ -94,7 +94,7 @@ function HomepageContent() {
 
             {/* step 4  */}
             <div className="flex relative">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-interface inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -109,7 +109,7 @@ function HomepageContent() {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+                <h2 className="font-medium title-font text-sm text-brand-black mb-1 tracking-wider">
                   {CONTENT_STEP_4.title}
                 </h2>
                 <p className="leading-relaxed">{CONTENT_STEP_4.description}</p>
