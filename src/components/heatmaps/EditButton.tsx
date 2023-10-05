@@ -16,7 +16,7 @@ export default function EditButton({ heatmapDoc, callback }: Props) {
   return (
     <div>
       <div className="cursor-pointer" onClick={() => setShowModal(true)}>
-        <WrenchIcon className="h-4 w-4 text-gray-500 hover:text-gray-700 " />
+        <WrenchIcon className="h-6 w-6 text-gray-500 hover:text-gray-700 " />
       </div>
 
       {showModal && (
