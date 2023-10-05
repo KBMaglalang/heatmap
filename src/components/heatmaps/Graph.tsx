@@ -2,28 +2,24 @@ import React from "react";
 import dynamic from "next/dynamic";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
+import { organizeDateData } from "@/lib/heatmap/organizeData";
+
 type Props = {
-  commitsData: { date: string; count: number }[];
-  userSetStartDate?: string;
-  useSetEndDate?: string;
+  commitsData: any;
 };
 
-import { SERIES, OPTION } from "@/constants/heatmapText";
+import { CHART_OPTIONS } from "@/constants/heatmapText";
 
-// import { getStartDate } from "@/lib/heatmap/getStartDate";
-// import { getEndDate } from "@/lib/heatmap/getEndDate";
+export default function Graph({ commitsData }: Props) {
+  const heatmapData = commitsData?.docs?.map((commit: any) => commit.data());
+  const seriesData = organizeDateData(heatmapData);
 
-export default function Graph({
-  commitsData,
-  userSetStartDate,
-  useSetEndDate,
-}: Props) {
   return (
-    <div className="flex flex-col items-center mx-auto px-4 my-4">
+    <div className="relative flex flex-col items-center mx-auto px-4 my-4 z-10">
       <ApexChart
         type="heatmap"
-        options={OPTION}
-        series={SERIES}
+        options={CHART_OPTIONS}
+        series={seriesData}
         height={400}
         width={1500}
       />
