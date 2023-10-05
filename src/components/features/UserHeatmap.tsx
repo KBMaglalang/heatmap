@@ -86,12 +86,12 @@ export default function UserHeatmap({ id }: Props) {
           {/* title and description */}
           <div className="flex flex-wrap w-full mb-20">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black font-brand-montserrat">
                 {heatmapDoc?.data()?.title || "Title"}
               </h1>
               <div className="h-1 w-20 bg-brand-accent rounded"></div>
             </div>
-            <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
+            <p className="lg:w-1/2 w-full leading-relaxed text-gray-500 font-brand-montserrat font-regular">
               {heatmapDoc?.data()?.description}
             </p>
           </div>

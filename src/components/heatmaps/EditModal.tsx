@@ -40,14 +40,18 @@ export default function EditModal({
           {/* settings input or logout */}
           <div className="mt-3">
             <div className="flex flex-col mt-2 text-center text-brand-black">
-              <h4 className="mb-2 text-xl font-bold text-brand-black">Edit</h4>
+              <h4 className="mb-2 text-xl font-medium text-brand-black font-brand-roboto">
+                Edit
+              </h4>
 
               {/* edit title */}
               <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl font-bold">Title:</span>
+                <span className="mr-4 text-xl font-brand-montserrat font-medium">
+                  Title:
+                </span>
                 <input
                   type="text"
-                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
+                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3 font-brand-montserrat font-medium"
                   placeholder="Title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
@@ -55,10 +59,12 @@ export default function EditModal({
               </div>
               {/* edit description */}
               <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl font-bold">Description:</span>
+                <span className="mr-4 text-xl  font-brand-montserrat font-medium">
+                  Description:
+                </span>
                 <input
                   type="text"
-                  className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
+                  className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3 font-brand-montserrat font-medium"
                   placeholder="Description"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
@@ -88,13 +94,13 @@ export default function EditModal({
           {/* user selection */}
           <div className="gap-2 items-center mt-3 sm:flex">
             <button
-              className="w-full mt-2 p-2.5 flex-1 text-white bg-brand-interface rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-indigo-600"
+              className="w-full mt-2 p-2.5 flex-1 text-white bg-brand-interface rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-indigo-600 font-brand-montserrat font-medium"
               onClick={handleAccept}
             >
               Accept
             </button>
             <button
-              className="w-full mt-2 p-2.5 flex-1  rounded-md outline-none border ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-gray-200"
+              className="w-full mt-2 p-2.5 flex-1  rounded-md outline-none border ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-gray-200 font-brand-montserrat font-medium"
               onClick={(e) => setModalOpen(false)}
             >
               Cancel

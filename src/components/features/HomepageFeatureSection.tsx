@@ -12,7 +12,7 @@ function HomepageFeatureSection() {
     <section className="text-brand-black body-font">
       <div className="container px-5 py-24 mx-auto">
         {/* title */}
-        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-brand-black mb-20">
+        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-brand-black mb-20 font-brand-roboto">
           {FEATURE_TITLE}
         </h1>
 
@@ -34,10 +34,10 @@ function HomepageFeatureSection() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-brand-black text-lg title-font font-medium mb-2">
+              <h2 className="text-brand-black text-lg title-font font-medium mb-2 font-brand-montserrat ">
                 {FEATURE_BENEFIT_1.title}
               </h2>
-              <p className="leading-relaxed text-base">
+              <p className="leading-relaxed text-base font-brand-montserrat font-regular">
                 {FEATURE_BENEFIT_1.description}
               </p>
             </div>
@@ -61,10 +61,10 @@ function HomepageFeatureSection() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-brand-black text-lg title-font font-medium mb-2">
+              <h2 className="text-brand-black text-lg title-font font-medium mb-2 font-brand-montserrat">
                 {FEATURE_BENEFIT_2.title}
               </h2>
-              <p className="leading-relaxed text-base">
+              <p className="leading-relaxed text-base font-brand-montserrat font-regular">
                 {FEATURE_BENEFIT_2.description}
               </p>
             </div>
@@ -87,10 +87,10 @@ function HomepageFeatureSection() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-brand-black text-lg title-font font-medium mb-2">
+              <h2 className="text-brand-black text-lg title-font font-medium mb-2 font-brand-montserrat">
                 {FEATURE_BENEFIT_3.title}
               </h2>
-              <p className="leading-relaxed text-base">
+              <p className="leading-relaxed text-base font-brand-montserrat font-regular">
                 {FEATURE_BENEFIT_3.description}
               </p>
             </div>

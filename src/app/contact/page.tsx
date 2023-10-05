@@ -10,13 +10,13 @@ export default function Contact() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col">
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 className="sm:w-2/5 text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0">
+              <h1 className="sm:w-2/5 text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0 font-brand-roboto">
                 Reach Out to ConsistChart
               </h1>
             </div>
           </div>
 
-          <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 p-4">
+          <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 p-4 font-brand-montserrat font-regular">
             <p className="text-base leading-relaxed mt-2">
               We're here to support your journey towards consistency and growth.
               Whether you have questions, feedback, or just want to share your

@@ -17,9 +17,9 @@ function Footer() {
           href={"/"}
           className="flex title-font font-medium items-center md:justify-start justify-center text-blue-900"
         >
-          <span className="ml-3 text-xl">{COMPANY_NAME}</span>
+          <span className="ml-3 text-xl font-brand-roboto">{COMPANY_NAME}</span>
         </Link>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 font-brand-montserrat font-light">
           {`© 2023 ${COMPANY_NAME}`}
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

@@ -39,7 +39,7 @@ export default function page() {
       <div className="container px-5 pt-24 mx-auto text-brand-black body-font ">
         <div className="mb-12">
           <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
+            <h1 className="sm:text-4xl text-2xl font-medium title-font mb-2 text-brand-black font-brand-roboto">
               User and Account Settings
             </h1>
           </div>
@@ -48,13 +48,15 @@ export default function page() {
             {/* light and dark theme */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
+                <h1 className="sm:text-3xl text-2xl font-medium  mb-2 text-brand-black font-brand-montserrat">
                   Theme
                 </h1>
               </div>
 
               <div className="flex flex-row justify-between items-center my-2 w-full">
-                <span className="mr-4 text-xl ">Light or Dark Mode</span>
+                <span className="mr-4 text-xl font-brand-montserrat font-regular">
+                  Light or Dark Mode
+                </span>
 
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input
@@ -74,14 +76,16 @@ export default function page() {
             {/* timezone settings */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
+                <h1 className="sm:text-3xl text-2xl font-medium  mb-2 text-brand-black font-brand-montserrat">
                   Timezone
                 </h1>
               </div>
 
               {/* timezone */}
               <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl ">Select Timezone</span>
+                <span className="mr-4 text-xl font-brand-montserrat font-regular">
+                  Select Timezone
+                </span>
 
                 <Select
                   isSearchable
@@ -90,7 +94,7 @@ export default function page() {
                   options={tempTimeZone}
                   // isLoading={isLoading}
                   menuPosition="fixed"
-                  className="mt-2 w-1/3 "
+                  className="mt-2 w-1/3 font-brand-montserrat font-regular"
                   // styles={{
                   //   control: (baseStyles) => ({
                   //     ...baseStyles,
@@ -123,12 +127,14 @@ export default function page() {
             {/* notifications */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
+                <h1 className="sm:text-3xl text-2xl font-medium  mb-2 text-brand-black font-brand-montserrat">
                   Notifications
                 </h1>
               </div>
               <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl ">Enable Notifications</span>
+                <span className="mr-4 text-xl font-brand-montserrat font-regular">
+                  Enable Notifications
+                </span>
 
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input
@@ -149,7 +155,7 @@ export default function page() {
             {/* account settings */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
+                <h1 className="sm:text-3xl text-2xl font-medium  mb-2 text-brand-black font-brand-montserrat">
                   Account Settings
                 </h1>
               </div>
@@ -157,11 +163,13 @@ export default function page() {
               <div>
                 {/* name */}
                 <div className="flex flex-row justify-between items-center mt-2 w-full">
-                  <span className="mr-4 text-xl ">Full Name</span>
+                  <span className="mr-4 text-xl font-brand-montserrat font-regular">
+                    Full Name
+                  </span>
 
                   <input
                     type="text"
-                    className="w-1/3 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-1/3 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
                     placeholder="Name"
                     value={name}
                     onChange={handleUpdateName}
@@ -173,18 +181,18 @@ export default function page() {
             {/* delete account */}
             <div className="mb-12">
               <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black">
+                <h1 className="sm:text-3xl text-2xl font-medium  mb-2 text-brand-black font-brand-montserrat">
                   Delete Account
                 </h1>
               </div>
               <div className="flex flex-row justify-between items-center mt-2 w-full ">
-                <span className="mr-4 text-xl ">
+                <span className="mr-4 text-xl font-brand-montserrat font-regular">
                   Are you sure you want to delete your account? This process is
                   non reversable
                 </span>
 
                 <button
-                  className="bg-red-500 rounded-lg text-white py-2 px-4"
+                  className="bg-red-500 rounded-lg text-white py-2 px-4 font-brand-montserrat font-regular"
                   onClick={handleDeleteAccount}
                 >
                   Delete Account
