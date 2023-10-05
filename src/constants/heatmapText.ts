@@ -12,6 +12,22 @@ export const CHART_OPTIONS = {
   stroke: {
     width: 0,
   },
+  tooltip: {
+    enabled: true,
+    x: {
+      show: true,
+      formatter: function (val: any) {
+        return `Week ${val}`;
+      },
+    },
+    // y: {
+    //   formatter: function (value, { series, seriesIndex, dataPointIndex, w }) {
+    //     console.log("🚀 ~ file: heatmapText.ts:25 ~ value:", value);
+    //     console.log({ series, seriesIndex, dataPointIndex, w });
+    //     return value;
+    //   },
+    // },
+  },
   // title: {
   //   text: "HeatMap Chart with Color Range",
   // },
