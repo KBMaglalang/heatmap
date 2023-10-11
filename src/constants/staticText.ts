@@ -1,5 +1,7 @@
 // header
 export const COMPANY_NAME = "ConsistChart";
+export const COMPANY_META_DESCRIPTION =
+  "Easily view your consistency with tasks and work with heatmaps!";
 
 // footer
 export const FACEBOOK_LINK = "https://www.facebook.com";
