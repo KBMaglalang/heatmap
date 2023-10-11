@@ -52,15 +52,11 @@ export default function UserPage() {
 
   return (
     <main className="">
-      {/* title */}
-      <div className="container px-5 pt-24 mx-auto text-brand-black body-font">
-        <div className="flex flex-wrap w-full mb-10 flex-col items-end text-center">
-          <NewButton />
-        </div>
-      </div>
-
       {/* heat map lists */}
       <GraphsList />
+
+      {/* button */}
+      <NewButton />
     </main>
   );
 }
