@@ -6,12 +6,13 @@ function HomepageGallery() {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black font-brand-roboto ">
-            Master Cleanse Reliac Heirloom
+            Visual Empowerment for Habit Mastery
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base font-brand-montserrat font-regular">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven't heard of them man bun deep jianbing selfies heirloom.
+            Discover the transformative impact of visual tracking. Our unique
+            heatmap representation captures your dedication and progress,
+            turning your daily efforts into a vibrant tapestry of achievement.
+            Stay inspired, stay consistent, and watch your goals come to life.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
