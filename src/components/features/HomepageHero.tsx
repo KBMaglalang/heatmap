@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { HERO_TITLE, HERO_DESC } from "@/constants/staticText";
 
@@ -35,10 +36,13 @@ function HomepageHero() {
 
         {/* hero image */}
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img
-            className="object-cover object-center rounded"
-            alt="hero"
+          <Image
             src={"/assets/images/hero-2.jpg"}
+            alt="hero"
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            className="img-fluid rounded-lg"
+            width={500}
+            height={500}
           />
         </div>
       </div>
