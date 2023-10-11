@@ -19,10 +19,10 @@ import { DAYS } from "@/constants/heatmapText";
 import { getWeekNumber } from "@/lib/heatmap/getWeekNumber";
 
 // components
-import EditButton from "../heatmaps/EditButton";
-import DeleteButton from "../heatmaps/DeleteButton";
-import NewDataPointButton from "../heatmaps/NewDataPointButton";
-import Graph from "../heatmaps/Graph";
+import EditButton from "./EditButton";
+import DeleteButton from "./DeleteButton";
+import NewDataPointButton from "./NewDataPointButton";
+import Graph from "./Graph";
 // import { database } from "firebase-admin";
 
 type Props = {
