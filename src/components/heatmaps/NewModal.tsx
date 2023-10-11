@@ -24,13 +24,13 @@ export default function NewModal({ setModalOpen, callback }: Props) {
     <div className="overflow-y-auto fixed inset-0 z-10">
       {/* handles clicks outside the modal box */}
       <div
-        className="fixed inset-0 w-full h-full  opacity-40"
+        className="fixed inset-0 w-full h-full bg-brand-black opacity-40"
         onClick={(e) => setModalOpen(false)}
       ></div>
 
       {/* modal box */}
       <div className="flex items-center px-4 py-8 min-h-screen">
-        <div className="relative w-full max-w-lg p-4 mx-auto rounded-md shadow-2xl  shadow-gray-700">
+        <div className="relative w-full max-w-lg p-4 mx-auto rounded-md shadow-2xl bg-white shadow-gray-700">
           {/* settings input or logout */}
           <div className="mt-3">
             <div className="flex flex-col mt-2  text-brand-black">
