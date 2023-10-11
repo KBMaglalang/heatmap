@@ -74,7 +74,7 @@ export default function NewDataPointModal({
                   onChange={(e) => setDescription(e.target.value)}
                   rows={8}
                   className="p-2 my-2  rounded-lg resize-none  focus:outline-none  border-2 text-brand-black font-brand-montserrat"
-                  placeholder="Type your prompt here"
+                  placeholder="Description"
                 />
               </div>
             </div>
