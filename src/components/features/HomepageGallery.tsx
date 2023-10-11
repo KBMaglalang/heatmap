@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function HomepageGallery() {
   return (
@@ -18,10 +19,13 @@ function HomepageGallery() {
         <div className="flex flex-wrap -m-4">
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
-              <img
-                alt="gallery"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+              <Image
                 src={"/assets/images/g-1.jpg"}
+                alt="gallery"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                className="absolute inset-0 w-full h-full object-cover object-center rounded-lg img-fluid"
+                width={500}
+                height={500}
               />
               <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
@@ -41,10 +45,13 @@ function HomepageGallery() {
           </div>
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
-              <img
-                alt="gallery"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+              <Image
                 src={"/assets/images/g-2.jpg"}
+                alt="gallery"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                className="absolute inset-0 w-full h-full object-cover object-center img-fluid rounded-lg"
+                width={500}
+                height={500}
               />
               <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
@@ -63,10 +70,13 @@ function HomepageGallery() {
           </div>
           <div className="lg:w-1/3 sm:w-1/2 p-4">
             <div className="flex relative">
-              <img
-                alt="gallery"
-                className="absolute inset-0 w-full h-full object-cover object-center"
+              <Image
                 src={"/assets/images/g-3.jpg"}
+                alt="gallery"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                className="absolute inset-0 w-full h-full object-cover object-center img-fluid rounded-lg"
+                width={500}
+                height={500}
               />
               <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
                 {/* <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">

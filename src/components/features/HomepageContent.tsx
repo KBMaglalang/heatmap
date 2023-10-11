@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import {
   CONTENT_STEP_1,
@@ -125,11 +126,16 @@ function HomepageContent() {
             </div>
           </div>
 
-          <img
-            className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
-            src={"/assets/images/feature.jpg"}
-            alt="step"
-          />
+          <div className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12">
+            <img
+              src={"/assets/images/feature.jpg"}
+              alt="step"
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              className="img-fluid rounded-lg"
+              width={1000}
+              height={1000}
+            />
+          </div>
         </div>
       </div>
     </section>
