@@ -1,7 +1,15 @@
 import React from "react";
+import type { Metadata } from "next";
 
 // components
 import HomepageContactForm from "@/components/features/HomepageContactForm";
+
+import { COMPANY_META_DESCRIPTION, COMPANY_NAME } from "@/constants/staticText";
+
+export const metadata: Metadata = {
+  title: `${COMPANY_NAME} | Contact`,
+  description: COMPANY_META_DESCRIPTION,
+};
 
 export default function Contact() {
   return (

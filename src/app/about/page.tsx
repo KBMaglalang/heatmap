@@ -1,4 +1,12 @@
 import React from "react";
+import type { Metadata } from "next";
+
+import { COMPANY_META_DESCRIPTION, COMPANY_NAME } from "@/constants/staticText";
+
+export const metadata: Metadata = {
+  title: `${COMPANY_NAME} | About`,
+  description: COMPANY_META_DESCRIPTION,
+};
 
 export default function About() {
   return (
