@@ -74,7 +74,7 @@ export const CHART_OPTIONS = {
           {
             from: -30,
             to: 0,
-            color: "#808080",
+            color: "#cfcfcf",
             name: "None",
           },
           {
