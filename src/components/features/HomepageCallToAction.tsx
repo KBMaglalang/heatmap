@@ -9,7 +9,7 @@ function HomepageCallToAction() {
   return (
     <section className="text-brand-black body-font">
       <div className="container px-5 py-24 mx-auto">
-        <div className=" flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+        <div className=" flex flex-col sm:flex-row sm:items-center items-center mx-auto">
           <h1 className="flex-grow  text-2xl font-medium title-font text-brand-black font-brand-roboto ">
             {CTA_PITCH}
           </h1>
