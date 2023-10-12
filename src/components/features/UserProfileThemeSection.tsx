@@ -1,13 +1,38 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+
+import { db } from "../../../firebase";
 
 export default function UserProfileThemeSection() {
+  const { data: session } = useSession();
   const [themeToggle, setThemeToggle] = useState(false);
 
-  const handleLightDarkToggle = () => {
-    // toast.success("Notifications updated");
+  useEffect(() => {
+    if (session) {
+      const fetchAndSetUserData = async () => {
+        // Define a reference to the user document in Firestore
+        const userRef = doc(db, "users", session?.user?.email!);
+
+        // Fetch the user document
+        const userDoc = await getDoc(userRef);
+
+        setThemeToggle(userDoc?.data()?.theme);
+      };
+
+      fetchAndSetUserData();
+    }
+  }, [session]);
+
+  const handleLightDarkToggle = async () => {
     setThemeToggle(!themeToggle);
+
+    const userRef = doc(db, "users", session?.user?.email!);
+    await updateDoc(userRef, {
+      theme: !themeToggle,
+    });
   };
 
   return (
@@ -26,7 +51,7 @@ export default function UserProfileThemeSection() {
         <label className="relative inline-flex items-center cursor-pointer">
           <input
             type="checkbox"
-            value=""
+            checked={themeToggle}
             className="sr-only peer"
             onClick={handleLightDarkToggle}
           />
