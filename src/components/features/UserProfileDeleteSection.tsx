@@ -1,11 +1,18 @@
 "use client";
 
 import React from "react";
+import { useSession, signOut } from "next-auth/react";
+import { deleteDoc, doc } from "firebase/firestore";
+import { db } from "../../../firebase";
 import { toast } from "react-hot-toast";
 
 export default function UserProfileDeleteSection() {
-  const handleDeleteAccount = () => {
+  const { data: session } = useSession();
+
+  const handleDeleteAccount = async () => {
     toast.success("Account deleted");
+    await deleteDoc(doc(db, "users", session?.user?.email!));
+    signOut({ callbackUrl: `${window.location.origin}/` });
   };
 
   return (

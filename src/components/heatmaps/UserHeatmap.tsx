@@ -23,7 +23,6 @@ import EditButton from "./EditButton";
 import DeleteButton from "./DeleteButton";
 import NewDataPointButton from "./NewDataPointButton";
 import Graph from "./Graph";
-// import { database } from "firebase-admin";
 
 type Props = {
   id: string;
