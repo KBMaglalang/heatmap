@@ -15,7 +15,7 @@ export default function DeleteModal({ setModalOpen, callback }: Props) {
   };
 
   return (
-    <div className="overflow-y-auto fixed inset-0 z-10">
+    <div className="overflow-y-auto fixed inset-0 z-50">
       {/* handles clicks outside the modal box */}
       <div
         className="fixed inset-0 w-full h-full bg-brand-black opacity-40"

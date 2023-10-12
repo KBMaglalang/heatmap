@@ -79,7 +79,7 @@ export default function UserHeatmap({ id }: Props) {
   };
 
   return (
-    <section className="text-gray-800 body-font ">
+    <section className="text-gray-800 body-font">
       <div className="container px-5 py-24 mx-auto rounded-2xl">
         <div className="flex">
           {/* title and description */}
@@ -96,7 +96,7 @@ export default function UserHeatmap({ id }: Props) {
           </div>
 
           {/* user selection */}
-          <div className="flex space-x-4 justify-between relative z-1000">
+          <div className="flex space-x-4 justify-between relative">
             <NewDataPointButton
               heatmapDoc={heatmapDoc?.data()}
               callback={addDataPoint}
