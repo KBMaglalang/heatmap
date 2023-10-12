@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col">
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-              <h1 className="sm:w-2/5 text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0 font-brand-roboto">
+              <h1 className="sm:w-full text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0 font-brand-roboto">
                 Reach Out to ConsistChart
               </h1>
             </div>
