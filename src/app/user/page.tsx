@@ -54,12 +54,14 @@ export default function UserPage() {
   }, [session]);
 
   return (
-    <main className="">
+    <main className="h-full">
       {/* heat map lists */}
       <GraphsList />
 
       {/* button */}
-      <NewButton />
+      <div className="fixed bottom-16 right-16 text-white p-2 rounded">
+        <NewButton />
+      </div>
     </main>
   );
 }

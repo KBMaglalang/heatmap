@@ -10,6 +10,7 @@ import { db } from "../../../firebase";
 // components
 import UserHeatmap from "@/components/heatmaps/UserHeatmap";
 import LoadingSpinner from "./LoadingSpinner";
+import EmptyGraphs from "./EmptyGraphs";
 
 export default function GraphsList() {
   const { data: session } = useSession();
@@ -23,9 +24,12 @@ export default function GraphsList() {
   );
 
   return (
-    <div>
+    <div className="h-full">
       {/* loading spinner */}
       {loading && <LoadingSpinner />}
+
+      {/* empty heatmaps */}
+      {heatmaps?.empty && <EmptyGraphs />}
 
       {!heatmaps?.empty &&
         heatmaps?.docs?.map((heatmap) => (

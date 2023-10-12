@@ -21,7 +21,7 @@ export default function NewButton() {
   };
 
   return (
-    <div className="fixed bottom-16 right-16 text-white p-2 rounded">
+    <div>
       <div className="cursor-pointer" onClick={() => setShowModal(true)}>
         <PlusCircleIcon className="h-16 w-16 text-brand-interface hover:text-gray-700 " />
       </div>
