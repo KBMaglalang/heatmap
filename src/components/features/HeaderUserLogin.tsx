@@ -15,7 +15,7 @@ export default async function HeaderUserLogin() {
   const session = await getServerSession(authOptions);
 
   return (
-    <>
+    <nav className="md:ml-auto  md:py-1 md:pl-4 flex flex-wrap items-center text-base justify-center">
       {!session ? (
         <SignInButton />
       ) : (
@@ -25,6 +25,6 @@ export default async function HeaderUserLogin() {
           <SignOutButton />
         </>
       )}
-    </>
+    </nav>
   );
 }
