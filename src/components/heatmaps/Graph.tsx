@@ -15,7 +15,7 @@ export default function Graph({ commitsData }: Props) {
   const seriesData = organizeDateData(heatmapData);
 
   // State to manage chart width
-  const [chartWidth, setChartWidth] = useState(0);
+  const [chartWidth, setChartWidth] = useState(1000);
 
   // Reference to the container
   const containerRef = useRef(null);
@@ -48,7 +48,7 @@ export default function Graph({ commitsData }: Props) {
         options={CHART_OPTIONS}
         series={seriesData}
         height={400}
-        width={chartWidth}
+        width={1500}
       />
     </div>
   );
