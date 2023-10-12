@@ -28,7 +28,7 @@ export default function DeleteModal({ setModalOpen, callback }: Props) {
           {/* settings input or logout */}
           <div className="mt-3">
             <div className="flex flex-col mt-2 text-center">
-              <h4 className="mb-2 text-xl font-medium font-brand-montserrat text-brand-black ">
+              <h4 className="mb-2 text-xl font-medium font-brand-roboto text-brand-black ">
                 Delete
               </h4>
             </div>
