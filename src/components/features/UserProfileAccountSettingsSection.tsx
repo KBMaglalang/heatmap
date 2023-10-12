@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { toast } from "react-hot-toast";
 import { useSession } from "next-auth/react";
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-import { useDocument } from "react-firebase-hooks/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { toast } from "react-hot-toast";
 
 import { db } from "../../../firebase";
 
@@ -32,7 +31,7 @@ export default function UserProfileAccountSettingsSection() {
     const userRef = doc(db, "users", session?.user?.email!);
 
     await updateDoc(userRef, {
-      name: name,
+      name: name.trim(),
     });
   };
 
@@ -51,20 +50,22 @@ export default function UserProfileAccountSettingsSection() {
             Full Name
           </span>
 
-          <input
-            type="text"
-            className="w-1/3 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <div className="flex flex-row w-1/3">
+            <input
+              type="text"
+              className=" flex-1 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-          <button
-            className="inline-flex items-center bg-brand-interface border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 mr-5 text-white font-brand-montserrat font-regular"
-            onClick={handleUpdateName}
-          >
-            Update
-          </button>
+            <button
+              className="inline-flex items-center bg-brand-interface border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 mr-5 text-white font-brand-montserrat font-regular"
+              onClick={handleUpdateName}
+            >
+              Update
+            </button>
+          </div>
         </div>
       </div>
     </div>
