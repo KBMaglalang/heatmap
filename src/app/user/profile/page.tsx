@@ -31,7 +31,7 @@ export default function UserProfile() {
             <UserProfileThemeSection />
 
             {/* timezone settings */}
-            <UserProfileTimezoneSection />
+            {/* <UserProfileTimezoneSection /> */}
 
             {/* notifications */}
             <UserProfileNotificationSection />
