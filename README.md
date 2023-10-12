@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ConsistChart - Habit Tracking Application
 
-## Getting Started
+ConsistChart offers users a powerful visual representation of their habits over time. By leveraging heatmap graphs, reminiscent of GitHub's commit graph, users can seamlessly track their consistency in any habit they wish to monitor.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Key Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### User Authentication:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Sign in securely with a Google account using next-auth.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Heatmap Management:
 
-## Learn More
+- Create a heatmap that visualizes your consistency in habits throughout the week.
+- Insert data points to highlight your commitment on specific days.
+- Personalize your heatmap with custom descriptions and titles.
+- Remove heatmaps as and when required.
 
-To learn more about Next.js, take a look at the following resources:
+#### User Profile and Settings:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Easily access and modify profile settings.
+- Toggle between light and dark themes. (Under Construction)
+- Adjust notification preferences. (Under Construction)
+- Update your profile name (with more functionalities on the horizon).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Technologies Used:
 
-## Deploy on Vercel
+- Next.js: Provides the frontend framework with powerful server-side rendering capabilities.
+- TypeScript: Ensures type safety, leading to robust code.
+- Tailwind CSS: Offers utility-first CSS for efficient custom design crafting.
+- Firebase: Acts as the backend solution for storing and fetching user data.
+- next-auth: Guarantees secure user authentication.
+- react-apexcharts: for heatmap creation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Future Implementations:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I hope to implement these other features over time:
+
+- [ ] Update the tooltip to show the commits for the day
+- [ ] Add statistics to your consistency graph
+- [ ] Add timezone information
+- [ ] Light and Dark mode
+- [ ] Send notifications
+
+## Screenshots
+
+!['homepage'](doc/1-homepage.PNG)
+!['loginHomepage'](doc/2-about.PNG)
+!['chat'](doc/3-contact.PNG)
+!['updatedTitle'](doc/4-graphs.PNG)
+!['mobileView'](doc/5-createNewHeatmap.PNG)
+!['settingsModal'](doc/6-heatmap.PNG)
+!['updateTitleModal'](doc/7-deleteModal.PNG)
+!['deletChatModal'](doc/8-editModal.PNG)
+!['createNewPromptModal'](doc/9-newDataPoint.PNG)
+!['editPromptModal'](doc/10-profile%20page.PNG)
+
+## How to Install and Run
+
+### Install
+
+1. Clone the repository: `git clone https://github.com/KBMaglalang/heatmap`
+2. Navigate to the project directory: `cd heatmap`
+3. Install the necessary packages: `npm install` or `npm i`
+4. Copy the `.env.example` file. You can create either `.env.local` or `.env` based on your preference
+5. Open the newly created .env or .env.local file and populate the fields with the required values. Ensure the necessary permissions are granted for any services or APIs you're connecting to.
+6. Replace the configuration details in firebase.ts with your specific Firebase configuration information
+
+### Run
+
+1. Run `npm run dev`
+2. Click on the link shown in the terminal, usually `localhost:3000`
+3. Sign in and create an account by clicking on the center icon
