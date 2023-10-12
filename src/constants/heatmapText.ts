@@ -57,11 +57,11 @@ export const CHART_OPTIONS = {
   //     },
   //   },
   // },
-  legend: {
-    // show: false,
-    // horizontalAlign: "center",
-    position: "bottom",
-  },
+  // legend: {
+  //   // show: false,
+  //   // horizontalAlign: "center",
+  //   position: "bottom",
+  // },
   plotOptions: {
     heatmap: {
       // shadeIntensity: 1,
