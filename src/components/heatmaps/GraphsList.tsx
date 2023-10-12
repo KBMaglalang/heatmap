@@ -9,6 +9,7 @@ import { db } from "../../../firebase";
 
 // components
 import UserHeatmap from "@/components/heatmaps/UserHeatmap";
+import LoadingSpinner from "./LoadingSpinner";
 
 export default function GraphsList() {
   const { data: session } = useSession();
@@ -23,6 +24,9 @@ export default function GraphsList() {
 
   return (
     <div>
+      {/* loading spinner */}
+      {loading && <LoadingSpinner />}
+
       {!heatmaps?.empty &&
         heatmaps?.docs?.map((heatmap) => (
           <UserHeatmap key={heatmap.id} id={heatmap.id} />
