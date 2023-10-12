@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { toast } from "react-hot-toast";
 
 import { db } from "../../../firebase";
 
@@ -27,11 +28,15 @@ export default function UserProfileThemeSection() {
   }, [session]);
 
   const handleLightDarkToggle = async () => {
-    setThemeToggle(!themeToggle);
+    const toggleState = !themeToggle;
+
+    toast.success(`${toggleState ? "Dark" : "Light"} mode`);
+
+    setThemeToggle(toggleState);
 
     const userRef = doc(db, "users", session?.user?.email!);
     await updateDoc(userRef, {
-      theme: !themeToggle,
+      theme: toggleState,
     });
   };
 
