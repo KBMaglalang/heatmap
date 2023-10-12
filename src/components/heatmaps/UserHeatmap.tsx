@@ -80,7 +80,7 @@ export default function UserHeatmap({ id }: Props) {
 
   return (
     <section className="text-gray-800 body-font">
-      <div className="container px-5 py-24 mx-auto rounded-2xl">
+      <div className="container px-5 pt-24 mx-auto rounded-2xl">
         <div className="flex">
           {/* title and description */}
           <div className="flex flex-wrap w-full mb-20">
