@@ -59,7 +59,7 @@ export default function UserPage() {
       <GraphsList />
 
       {/* button */}
-      <div className="fixed bottom-16 right-16 text-white p-2 rounded z-50">
+      <div className="fixed bottom-32 sm:bottom-16 right-16 text-white p-2 rounded z-50">
         <NewButton />
       </div>
     </main>
