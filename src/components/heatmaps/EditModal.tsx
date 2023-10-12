@@ -39,35 +39,42 @@ export default function EditModal({
         <div className="relative w-full max-w-lg p-4 mx-auto rounded-md shadow-2xl bg-white shadow-gray-700">
           {/* settings input or logout */}
           <div className="mt-3">
-            <div className="flex flex-col mt-2 text-center text-brand-black">
-              <h4 className="mb-2 text-xl font-medium text-brand-black font-brand-roboto">
+            <div className="flex flex-col mt-2  text-brand-black">
+              <h4 className="mb-2 text-xl font-medium text-brand-black font-brand-roboto text-center">
                 Edit
               </h4>
 
               {/* edit title */}
-              <div className="flex flex-row justify-between items-center mt-2 w-full">
+              <div className="flex flex-col justify-between  mt-2 w-full text-brand-black">
                 <span className="mr-4 text-xl font-brand-montserrat font-medium">
                   Title:
                 </span>
                 <input
                   type="text"
-                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3 font-brand-montserrat font-medium"
+                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none border-2 text-brand-black font-brand-montserrat"
                   placeholder="Title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
               {/* edit description */}
-              <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl  font-brand-montserrat font-medium">
+              <div className="flex flex-col mt-2 w-full">
+                <span className="mr-4 text-xl font-medium text-brand-black font-brand-montserrat">
                   Description:
                 </span>
-                <input
+                {/* <input
                   type="text"
                   className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3 font-brand-montserrat font-medium"
                   placeholder="Description"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
+                /> */}
+                <textarea
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  rows={8}
+                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none  border-2 text-brand-black font-brand-montserrat"
+                  placeholder="Description"
                 />
               </div>
               {/* edit start date */}
