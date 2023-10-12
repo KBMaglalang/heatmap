@@ -40,7 +40,7 @@ export default function UserProfile() {
             <UserProfileAccountSettingsSection />
 
             {/* delete account */}
-            <UserProfileDeleteSection />
+            {/* <UserProfileDeleteSection /> */}
           </div>
         </div>
       </div>
