@@ -33,6 +33,8 @@ export default function UserProfileAccountSettingsSection() {
     await updateDoc(userRef, {
       name: name.trim(),
     });
+
+    toast.success("Name updated");
   };
 
   return (
@@ -50,6 +52,7 @@ export default function UserProfileAccountSettingsSection() {
             Full Name
           </span>
 
+          {/* input field */}
           <div className="flex flex-row w-1/3">
             <input
               type="text"
