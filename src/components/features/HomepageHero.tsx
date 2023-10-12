@@ -1,10 +1,11 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 import { HERO_TITLE, HERO_DESC } from "@/constants/staticText";
-
-// TODO: update the image to use NEXT IMAGE and a real image
 
 function HomepageHero() {
   return (
@@ -21,11 +22,16 @@ function HomepageHero() {
 
           {/* user buttons */}
           <div className="flex justify-center">
-            <Link href={"/signup"}>
-              <button className="inline-flex text-white bg-brand-interface border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg font-brand-montserrat font-regular">
-                Sign Up
-              </button>
-            </Link>
+            <button
+              onClick={() =>
+                signIn("google", {
+                  callbackUrl: `${window.location.origin}/user`,
+                })
+              }
+              className="inline-flex text-white bg-brand-interface border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg font-brand-montserrat font-regular"
+            >
+              Sign Up
+            </button>
             <Link href={"/about"}>
               <button className="ml-4 inline-flex text-brand-black bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg font-brand-montserrat font-regular">
                 Learn More
