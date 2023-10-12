@@ -1,12 +1,39 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { toast } from "react-hot-toast";
+import { useSession } from "next-auth/react";
+import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { useDocument } from "react-firebase-hooks/firestore";
+
+import { db } from "../../../firebase";
 
 export default function UserProfileAccountSettingsSection() {
+  const { data: session } = useSession();
   const [name, setName] = useState("");
 
-  const handleUpdateName = (e: any) => {
-    setName(e.target.value);
+  useEffect(() => {
+    if (session) {
+      const fetchAndSetUserData = async () => {
+        // Define a reference to the user document in Firestore
+        const userRef = doc(db, "users", session?.user?.email!);
+
+        // Fetch the user document
+        const userDoc = await getDoc(userRef);
+
+        setName(userDoc?.data()?.name);
+      };
+
+      fetchAndSetUserData();
+    }
+  }, [session]);
+
+  const handleUpdateName = async () => {
+    const userRef = doc(db, "users", session?.user?.email!);
+
+    await updateDoc(userRef, {
+      name: name,
+    });
   };
 
   return (
@@ -29,8 +56,10 @@ export default function UserProfileAccountSettingsSection() {
             className="w-1/3 bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
             placeholder="Name"
             value={name}
-            onChange={handleUpdateName}
+            onChange={(e) => setName(e.target.value)}
           />
+
+          <button onClick={handleUpdateName}>Update</button>
         </div>
       </div>
     </div>

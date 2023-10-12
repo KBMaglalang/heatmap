@@ -41,6 +41,9 @@ export default function UserPage() {
             name: session?.user?.name,
             email: session?.user?.email,
             createdAt: Timestamp.now(),
+            notification: false, // false -> no notifications
+            theme: false, // false = light, true = dark
+            timezone: "",
           };
           await setDoc(userRef, userData);
         }
