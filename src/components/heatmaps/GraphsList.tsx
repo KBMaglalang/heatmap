@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useSession } from "next-auth/react";
-import { Timestamp, doc, getDoc, setDoc } from "firebase/firestore";
 import { collection, orderBy, query } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore"; // !
 import { db } from "../../../firebase";
