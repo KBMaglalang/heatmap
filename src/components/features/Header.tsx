@@ -4,7 +4,7 @@ import Link from "next/link";
 import { COMPANY_NAME } from "@/constants/staticText";
 
 // components
-import HeaderUserLogin from "./features/HeaderUserLogin";
+import HeaderUserLogin from "./HeaderUserLogin";
 
 function Header() {
   return (
