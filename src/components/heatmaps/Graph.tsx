@@ -20,6 +20,9 @@ export default function Graph({ commitsData }: Props) {
   // Reference to the container
   const containerRef = useRef(null);
 
+  /**
+  Sets the chart width based on the size of the container element and updates it on window resize.
+  @returns {void} */
   useEffect(() => {
     // Function to update width based on container size
     const updateChartWidth = () => {

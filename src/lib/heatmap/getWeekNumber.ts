@@ -1,3 +1,8 @@
+/**
+Calculates the week number of a given date.
+@param {Date} d - The input date.
+@returns {number} - The week number of the input date.
+*/
 export function getWeekNumber(d: Date): number {
   // Copy date so don't modify original
   d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));

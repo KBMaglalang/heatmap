@@ -8,6 +8,11 @@ type DateDocument = {
   weekOfYear: number;
 };
 
+/**
+Organizes date data into a grouped structure for creating a series.
+@param {DateDocument[]} documents - An array of date documents.
+@returns {Array} - An array containing the organized series data.
+*/
 export const organizeDateData = (documents: DateDocument[]) => {
   // Initial structure
   const grouped: { [day: string]: { [week: number]: number } } = {};
