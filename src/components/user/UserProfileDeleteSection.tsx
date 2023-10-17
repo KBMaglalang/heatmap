@@ -9,6 +9,9 @@ import { toast } from "react-hot-toast";
 export default function UserProfileDeleteSection() {
   const { data: session } = useSession();
 
+  /**
+  Deletes a user account from the Firestore database and signs out the user.
+  @returns {Promise<void>} - A promise that resolves when the account is deleted and the user is signed out. */
   const handleDeleteAccount = async () => {
     toast.success("Account deleted");
     await deleteDoc(doc(db, "users", session?.user?.email!));

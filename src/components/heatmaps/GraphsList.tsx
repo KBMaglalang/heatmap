@@ -14,6 +14,11 @@ import EmptyGraphs from "./EmptyGraphs";
 export default function GraphsList() {
   const { data: session } = useSession();
 
+  /**
+  Fetches a collection of heatmaps associated with the user from the Firestore database.
+  @type {Array} heatmaps - An array containing the fetched heatmaps.
+  @type {boolean} loading - A boolean indicating whether the heatmaps are currently being loaded.
+  @type {any} error - An error object that captures any errors that occur during the fetch operation. */
   const [heatmaps, loading, error] = useCollection(
     session &&
       query(

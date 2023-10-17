@@ -1,9 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
-
-import { UserIcon } from "@heroicons/react/24/outline";
 
 // components
 import SignInButton from "../common/SignInButton";

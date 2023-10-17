@@ -11,6 +11,9 @@ export default function UserProfileAccountSettingsSection() {
   const { data: session } = useSession();
   const [name, setName] = useState("");
 
+  /**
+  Fetches and sets the user data from the Firestore database.
+  @returns {void} */
   useEffect(() => {
     if (session) {
       const fetchAndSetUserData = async () => {
@@ -27,6 +30,10 @@ export default function UserProfileAccountSettingsSection() {
     }
   }, [session]);
 
+  /**
+  Updates the name of a user in the Firestore database.
+  @returns {Promise<void>} - A promise that resolves when the name is successfully updated.
+  */
   const handleUpdateName = async () => {
     const userRef = doc(db, "users", session?.user?.email!);
 

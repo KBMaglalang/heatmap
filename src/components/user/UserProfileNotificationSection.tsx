@@ -11,6 +11,9 @@ export default function UserProfileNotificationSection() {
   const { data: session } = useSession();
   const [notificationsToggle, setNotificationsToggle] = useState(false);
 
+  /**
+  Fetches and sets the user's notification preference from the Firestore database.
+  @returns {void} */
   useEffect(() => {
     if (session) {
       const fetchAndSetUserData = async () => {
@@ -27,6 +30,9 @@ export default function UserProfileNotificationSection() {
     }
   }, [session]);
 
+  /**
+  Toggles the user's notification preference and updates it in the Firestore database.
+  @returns {Promise<void>} - A promise that resolves when the notification preference is updated. */
   const handleNotificationToggle = async () => {
     const toggleState = !notificationsToggle;
 

@@ -11,6 +11,9 @@ export default function UserProfileThemeSection() {
   const { data: session } = useSession();
   const [themeToggle, setThemeToggle] = useState(false);
 
+  /**
+  Fetches and sets the user's theme preference from the Firestore database.
+  @returns {void} */
   useEffect(() => {
     if (session) {
       const fetchAndSetUserData = async () => {
@@ -27,6 +30,9 @@ export default function UserProfileThemeSection() {
     }
   }, [session]);
 
+  /**
+  Toggles between light and dark mode and updates the user's theme preference in the Firestore database.
+  @returns {Promise<void>} - A promise that resolves when the theme is updated. */
   const handleLightDarkToggle = async () => {
     const toggleState = !themeToggle;
 
