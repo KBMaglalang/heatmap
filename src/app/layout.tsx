@@ -3,9 +3,6 @@ import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
-
 // components
 import HomepageLayout from "@/components/features/HomepageLayout";
 import ToastProvider from "@/providers/ToastProvider";
@@ -27,7 +24,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <SessionProvider>
           <ToastProvider />
           <HomepageLayout>{children}</HomepageLayout>
