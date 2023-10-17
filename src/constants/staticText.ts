@@ -20,18 +20,20 @@ export const CTA_PITCH =
 
 // feature section
 export const FEATURE_TITLE = "Empower Your Habits with Our Key Features";
-export const FEATURE_BENEFIT_1 = {
-  title: "Dynamic Visualization",
-  description: `Witness real-time progress as your habits unfold, turning every day's dedication into a vibrant piece of your success mosaic.`,
-};
-export const FEATURE_BENEFIT_2 = {
-  title: "Tailored Tracking",
-  description: `Customize and categorize your habits, ensuring that each unique goal is monitored and celebrated in its own right.`,
-};
-export const FEATURE_BENEFIT_3 = {
-  title: "Motivational Metrics",
-  description: `Dive deep into your performance analytics, gaining insights that inspire and guide you to maintain consistency and reach new heights.`,
-};
+export const FEATURE_LIST = [
+  {
+    title: "Dynamic Visualization",
+    description: `Witness real-time progress as your habits unfold, turning every day's dedication into a vibrant piece of your success mosaic.`,
+  },
+  {
+    title: "Tailored Tracking",
+    description: `Customize and categorize your habits, ensuring that each unique goal is monitored and celebrated in its own right.`,
+  },
+  {
+    title: "Motivational Metrics",
+    description: `Dive deep into your performance analytics, gaining insights that inspire and guide you to maintain consistency and reach new heights.`,
+  },
+];
 
 // content steps
 export const CONTENT_STEP_1 = {
@@ -54,3 +56,28 @@ export const CONTENT_STEP_4 = {
   description:
     "Observe the fruits of your persistence. As days turn into weeks, watch your progress tell its own story.",
 };
+
+// gallery content
+export const GALLERY_TITLE = "Visual Empowerment for Habit Mastery";
+export const GALLERY_DESC =
+  "Discover the transformative impact of visual tracking. Our unique heatmap representation captures your dedication and progress, turning your daily efforts into a vibrant tapestry of achievement. Stay inspired, stay consistent, and watch your goals come to life.";
+export const GALLERY_LIST = [
+  {
+    title: "Consistency, Color-Coded",
+    description:
+      "Dive deep into a colorful representation of your daily drive. With each hue, recognize your dedication, and be inspired to add more to your canvas.",
+    image: "/assets/images/g-2.jpg",
+  },
+  {
+    title: "Master Your Momentum",
+    description:
+      "Unlock the power of visual feedback with Consistency Visualizer. As you see your efforts mapped out day by day, harness the motivation to build, maintain, and elevate your daily commitments.",
+    image: "/assets/images/g-1.jpg",
+  },
+  {
+    title: "Visualize to Actualize",
+    description:
+      "Every goal starts with consistent effort. Watch your persistence unfold in a dynamic heatmap, propelling you to commit, continue, and conquer.",
+    image: "/assets/images/g-3.jpg",
+  },
+];
