@@ -57,18 +57,12 @@ export default function EditModal({
                   onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
+
               {/* edit description */}
               <div className="flex flex-col mt-2 w-full">
                 <span className="mr-4 text-xl font-medium text-brand-black font-brand-montserrat">
                   Description:
                 </span>
-                {/* <input
-                  type="text"
-                  className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3 font-brand-montserrat font-medium"
-                  placeholder="Description"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                /> */}
                 <textarea
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
@@ -77,6 +71,7 @@ export default function EditModal({
                   placeholder="Description"
                 />
               </div>
+
               {/* edit start date */}
               {/* <div className="flex flex-row justify-between items-center mt-2 w-full">
                 <span className="mr-4 text-xl font-bold">Start Date:</span>

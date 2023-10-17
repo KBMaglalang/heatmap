@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 // components
-import UserProfileDeleteSection from "@/components/features/UserProfileDeleteSection";
-import UserProfileAccountSettingsSection from "@/components/features/UserProfileAccountSettingsSection";
-import UserProfileThemeSection from "@/components/features/UserProfileThemeSection";
-import UserProfileNotificationSection from "@/components/features/UserProfileNotificationSection";
-import UserProfileTimezoneSection from "@/components/features/UserProfileTimezoneSection";
+import UserProfileDeleteSection from "@/components/user/UserProfileDeleteSection";
+import UserProfileAccountSettingsSection from "@/components/user/UserProfileAccountSettingsSection";
+import UserProfileThemeSection from "@/components/user/UserProfileThemeSection";
+import UserProfileNotificationSection from "@/components/user/UserProfileNotificationSection";
+import UserProfileTimezoneSection from "@/components/user/UserProfileTimezoneSection";
 
 export default function UserProfile() {
   return (
