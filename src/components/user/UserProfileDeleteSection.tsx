@@ -2,19 +2,41 @@
 
 import React from "react";
 import { useSession, signOut } from "next-auth/react";
-import { deleteDoc, doc } from "firebase/firestore";
+import { deleteDoc, doc, collection, orderBy, query } from "firebase/firestore";
+import { useCollection } from "react-firebase-hooks/firestore";
+
+// components
+
+// context or store
+
+// constants and functions
 import { db } from "../../../firebase";
-import { toast } from "react-hot-toast";
 
 export default function UserProfileDeleteSection() {
   const { data: session } = useSession();
+  const [heatmaps] = useCollection(
+    session &&
+      query(
+        collection(db, "users", session?.user?.email!, "heatmaps"),
+        orderBy("createdAt", "desc")
+      )
+  );
 
   /**
   Deletes a user account from the Firestore database and signs out the user.
   @returns {Promise<void>} - A promise that resolves when the account is deleted and the user is signed out. */
   const handleDeleteAccount = async () => {
-    toast.success("Account deleted");
+    // delete all heatmaps associated with the user
+    await heatmaps?.docs?.map(async (heatmap) => {
+      await deleteDoc(
+        doc(db, "users", session?.user?.email!, "heatmaps", heatmap.id)
+      );
+    });
+
+    // delete the user document
     await deleteDoc(doc(db, "users", session?.user?.email!));
+
+    // sign out the user and return to the homepage
     signOut({ callbackUrl: `${window.location.origin}/` });
   };
 
