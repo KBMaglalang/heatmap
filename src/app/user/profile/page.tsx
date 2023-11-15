@@ -28,7 +28,7 @@ export default function UserProfile() {
 
           <div className="flex flex-col w-4/5 mx-auto mt-24">
             {/* light and dark theme */}
-            <UserProfileThemeSection />
+            {/* <UserProfileThemeSection /> */}
 
             {/* timezone settings */}
             {/* <UserProfileTimezoneSection /> */}
