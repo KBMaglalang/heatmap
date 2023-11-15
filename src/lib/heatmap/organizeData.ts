@@ -21,7 +21,7 @@ export const organizeDateData = (documents: DateDocument[]) => {
   });
 
   // Group by dayOfWeek and weekOfYear
-  documents.forEach((doc) => {
+  documents?.forEach((doc) => {
     if (!grouped[doc.dayOfWeek][doc.weekOfYear]) {
       grouped[doc.dayOfWeek][doc.weekOfYear] = 0;
     }
