@@ -24,6 +24,10 @@ import DeleteButton from "./DeleteButton";
 import NewDataPointButton from "./NewDataPointButton";
 import Graph from "./Graph";
 
+// context or store
+
+// constants and functions
+
 type Props = {
   id: string;
 };

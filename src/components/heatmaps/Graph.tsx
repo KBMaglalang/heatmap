@@ -2,13 +2,13 @@ import React, { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
+// constants and functions
 import { organizeDateData } from "@/lib/heatmap/organizeData";
+import { CHART_OPTIONS } from "@/constants/heatmapText";
 
 type Props = {
   commitsData: any;
 };
-
-import { CHART_OPTIONS } from "@/constants/heatmapText";
 
 export default function Graph({ commitsData }: Props) {
   const heatmapData = commitsData?.docs?.map((commit: any) => commit.data());
@@ -44,7 +44,7 @@ export default function Graph({ commitsData }: Props) {
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col items-center mx-auto px-4 my-4 z-10"
+      className="relative flex flex-col md:items-center mx-auto px-4 my-4 z-10 overflow-x-scroll"
     >
       <ApexChart
         type="heatmap"

@@ -11,6 +11,10 @@ import UserHeatmap from "@/components/heatmaps/UserHeatmap";
 import LoadingSpinner from "./LoadingSpinner";
 import EmptyGraphs from "./EmptyGraphs";
 
+// context or store
+
+// constants and functions
+
 export default function GraphsList() {
   const { data: session } = useSession();
 
