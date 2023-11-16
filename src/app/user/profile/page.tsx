@@ -26,22 +26,22 @@ export default function UserProfile() {
             </h1>
           </div>
 
-          <div className="flex flex-col w-4/5 mx-auto mt-24">
-            {/* light and dark theme */}
-            {/* <UserProfileThemeSection /> */}
+          {/* <div className="flex flex-col w-4/5 mx-auto mt-24"> */}
+          {/* account settings */}
+          <UserProfileAccountSettingsSection />
 
-            {/* timezone settings */}
-            {/* <UserProfileTimezoneSection /> */}
+          {/* notifications */}
+          <UserProfileNotificationSection />
 
-            {/* notifications */}
-            <UserProfileNotificationSection />
+          {/* light and dark theme */}
+          <UserProfileThemeSection />
 
-            {/* account settings */}
-            <UserProfileAccountSettingsSection />
+          {/* timezone settings */}
+          {/* <UserProfileTimezoneSection /> */}
 
-            {/* delete account */}
-            <UserProfileDeleteSection />
-          </div>
+          {/* delete account */}
+          <UserProfileDeleteSection />
+          {/* </div> */}
         </div>
       </div>
     </main>
