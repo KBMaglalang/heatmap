@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSession } from "next-auth/react";
 import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import {
@@ -145,20 +145,7 @@ export default function UserHeatmap({ id }: Props) {
 
         {/* heat map */}
         {!datesLoading && <Graph commitsData={dates || []} />}
-
-        {/* stats */}
-        <div>
-          {/* daily average */}
-          {/* how many days in a year how you done this */}
-          {/* longest streak */}
-          {/* current streak */}
-        </div>
       </div>
     </section>
   );
 }
-
-// TODO: stats - daily average - create function to calculate that
-// TODO: state - how many days in a year how you done this - create function to calculate that
-// TODO: stats - longest streak - create function to calculate that
-// TODO: stats - current streak - create function to calculate that

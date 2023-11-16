@@ -2,20 +2,18 @@ import React from "react";
 import type { Metadata } from "next";
 
 // components
-import { COMPANY_META_DESCRIPTION, COMPANY_NAME } from "@/constants/staticText";
+import NewButton from "@/components/heatmaps/NewButton";
+import GraphsList from "@/components/heatmaps/GraphsList";
 
 // context or stores
 
 // constants and functions
+import { COMPANY_META_DESCRIPTION, COMPANY_NAME } from "@/constants/staticText";
 
 export const metadata: Metadata = {
   title: `${COMPANY_NAME} | Graphs`,
   description: COMPANY_META_DESCRIPTION,
 };
-
-// components
-import NewButton from "@/components/heatmaps/NewButton";
-import GraphsList from "@/components/heatmaps/GraphsList";
 
 export default function UserPage() {
   return (

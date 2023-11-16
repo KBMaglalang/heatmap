@@ -64,24 +64,6 @@ export default function NewModal({ setModalOpen, callback }: Props) {
                   placeholder="Description"
                 />
               </div>
-              {/* edit start date */}
-              {/* <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl font-bold">Start Date:</span>
-                <input
-                  type="text"
-                  className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
-                  placeholder="Start Date"
-                />
-              </div> */}
-              {/* edit end date */}
-              {/* <div className="flex flex-row justify-between items-center mt-2 w-full">
-                <span className="mr-4 text-xl font-bold">End Date:</span>
-                <input
-                  type="text"
-                  className=" p-2 my-2  rounded-lg resize-none  focus:outline-none w-2/3"
-                  placeholder="End Date"
-                />
-              </div> */}
             </div>
           </div>
 

@@ -81,3 +81,17 @@ export const GALLERY_LIST = [
     image: "/assets/images/g-3.jpg",
   },
 ];
+
+// About Us
+export const ABOUT_TITLE = "About ConsistChart";
+export const ABOUT_DESCRIPTION = [
+  "ConsistChart was born from a simple revelation: the immense satisfaction derived from seeing daily consistency visualized in a clear and captivating manner, much like a commit graph. But why should this powerful visual motivation be confined only to GitHub commits? We believed it shouldn't be.",
+  "At ConsistChart, we expanded this concept to encapsulate the myriad activities and challenges we face every day. Our platform provides a panoramic view of your annual progress, allowing you to observe the beautiful tapestry of your dedication, one day at a time. From daily habits to long-term goals, our charts serve as a testament to the power of regularity and the achievements that come from it.",
+  "Our mission was clear from the outset: to create an intuitive,straightforward tool that champions consistency. We wanted to celebrate every individual who commits to their journey, acknowledging the effort it takes to stay the course. With ConsistChart, every dot, every streak, and every filled square is a badge of honor, a celebration of persistence.",
+  "Join us in this journey of unwavering dedication. Let's build habits, track progress, and celebrate every consistent effort, big or small.",
+];
+
+// contact us
+export const CONTACT_TITLE = "Reach Out to ConsistChart";
+export const CONTACT_DESCRIPTION =
+  "We're here to support your journey towards consistency and growth. Whether you have questions, feedback, or just want to share your success stories, we're all ears. Get in touch with the ConsistChart team and let's chart your path forward together.";
