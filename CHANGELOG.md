@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/KBMaglalang/heatmap/compare/v0.1.0...v0.1.1) (2023-11-16)
+
+
+### Features
+
+* add comments ([233b07c](https://github.com/KBMaglalang/heatmap/commit/233b07cedb04f58a693ff335325225ead4f4271f))
+* create feature component ([28a5a68](https://github.com/KBMaglalang/heatmap/commit/28a5a6808a5f3d7778807448868a5b47ee810469))
+* create gally item component ([454fe21](https://github.com/KBMaglalang/heatmap/commit/454fe21d00dfff97fcba495da254ebf14c04cafe))
+* display data about the heatmap ([888a182](https://github.com/KBMaglalang/heatmap/commit/888a182f7dac2b315603b00f2b5461a15d04d5de))
+* move components to feature folder ([5156a79](https://github.com/KBMaglalang/heatmap/commit/5156a7910c8876fac6ad1cf21223934992358abf))
+* move user components to a user folder ([cedda42](https://github.com/KBMaglalang/heatmap/commit/cedda42f1270809558f6baf92fb12b11d544f95e))
+* organize code ([507c7fb](https://github.com/KBMaglalang/heatmap/commit/507c7fbc7922cdce0a0b844081f227cd84c66f27))
+* remove dead code ([5c0cce1](https://github.com/KBMaglalang/heatmap/commit/5c0cce1f0b9c7998ed3c34f6592400aed9fdb60e))
+* remove dead code ([8a4bf61](https://github.com/KBMaglalang/heatmap/commit/8a4bf61ab4c7aa9fa35b0a45559ba72165d7fcf4))
+* remove dead code ([920b651](https://github.com/KBMaglalang/heatmap/commit/920b6513e236a8987afe95ca096fbe04c214aff6))
+* remove dead code ([1c03f3a](https://github.com/KBMaglalang/heatmap/commit/1c03f3abdb410b823bb0a36fd4fba0a454db6ff1))
+* remove old user input ([7ae79fb](https://github.com/KBMaglalang/heatmap/commit/7ae79fb8e1f8e1e3fb943e64f18a72ec769c245e))
+* remove unused code ([927377b](https://github.com/KBMaglalang/heatmap/commit/927377b000386186e20b0b9a95f7657d3ae1e096))
+* remove unused component ([6a09023](https://github.com/KBMaglalang/heatmap/commit/6a0902392fe335dfc6dd7f352cac9c2a0693fe98))
+* remove unused firebase functions ([c59053a](https://github.com/KBMaglalang/heatmap/commit/c59053a93b74ccc797343059b1532ef89f283be5))
+* remove unused font implementation ([d9bda94](https://github.com/KBMaglalang/heatmap/commit/d9bda943b0e3861f9d01e8907d5a74afe6b4ec93))
+* remove unused packages ([dd38800](https://github.com/KBMaglalang/heatmap/commit/dd3880011051ecf752d99dde1e5df72e46eec672))
+* remove unused svg ([f7c727e](https://github.com/KBMaglalang/heatmap/commit/f7c727e43d387148bfa148799398aa71c6893262))
+* set the graph to have overflow scroll ([6a3cd6a](https://github.com/KBMaglalang/heatmap/commit/6a3cd6a3872a46230618cd13c66eafb31a6126af))
+* setup code to delete user fields and collections ([c534114](https://github.com/KBMaglalang/heatmap/commit/c534114cc3d7a31bc2fb8a849706dba1d91cc275))
+* simplify to use feature item on the homepage feature section ([bff229e](https://github.com/KBMaglalang/heatmap/commit/bff229e404380d1257839840f6316852ba7906ed))
+* update content in static texts ([de4921b](https://github.com/KBMaglalang/heatmap/commit/de4921bb574e90961553fef6912025281de8e9ce))
+* update path to compnents ([87f65da](https://github.com/KBMaglalang/heatmap/commit/87f65dae4732031285edad298fef898bfbffb93b))
+* update paths to header and footer ([0c255c1](https://github.com/KBMaglalang/heatmap/commit/0c255c155263db498339a3840b8d089f16cc4812))
+* use the gally item in the homepage gallery section ([956387d](https://github.com/KBMaglalang/heatmap/commit/956387dd90fc0f8817c8811f101e45fa83e1b1c6))
+* user can toggle between dark and light mode ([e0ecf47](https://github.com/KBMaglalang/heatmap/commit/e0ecf47c9a5d7faa6998e52f51c0429e6062c471))
+
+
+### Bug Fixes
+
+* set the width of the graph ([910c279](https://github.com/KBMaglalang/heatmap/commit/910c279bedaa88b0453c2e86f88652d265a7f308))
+
 ## 0.1.0 (2023-10-12)
 
 
