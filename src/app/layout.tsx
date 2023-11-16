@@ -5,9 +5,12 @@ import { authOptions } from "@/lib/auth";
 
 // components
 import HomepageLayout from "@/components/features/HomepageLayout";
-import ToastProvider from "@/providers/ToastProvider";
+import ClientProvider from "@/providers/ClientProvider";
 import { SessionProvider } from "@/providers/SessionProvider";
 
+// context or store
+
+// constants and functions
 import { COMPANY_NAME, COMPANY_META_DESCRIPTION } from "@/constants/staticText";
 
 export const metadata: Metadata = {
@@ -26,7 +29,7 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         <SessionProvider>
-          <ToastProvider />
+          <ClientProvider />
           <HomepageLayout>{children}</HomepageLayout>
         </SessionProvider>
       </body>
