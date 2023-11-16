@@ -1,11 +1,14 @@
 // components
-
 import HomepageHero from "@/components/features/HomepageHero";
 import HomepageCallToAction from "@/components/features/HomepageCallToAction";
 import HomepageFeatureSection from "@/components/features/HomepageFeatureSection";
 import HomepageGallery from "@/components/features/HomepageGallery";
 import HomepageContent from "@/components/features/HomepageContent";
 import HomepageContactForm from "@/components/features/HomepageContactForm";
+
+// context or stores
+
+// constants and functions
 
 export default function Home() {
   return (

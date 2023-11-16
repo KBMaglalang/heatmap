@@ -2,17 +2,8 @@
 
 import React from "react";
 import { useSession } from "next-auth/react";
-import { useCollection, useDocument } from "react-firebase-hooks/firestore";
-import {
-  Timestamp,
-  addDoc,
-  collection,
-  deleteDoc,
-  doc,
-  updateDoc,
-  query,
-  orderBy,
-} from "firebase/firestore";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { collection, query, orderBy } from "firebase/firestore";
 
 // components
 import LoadingSpinner from "./LoadingSpinner";

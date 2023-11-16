@@ -3,7 +3,6 @@
 import React from "react";
 import Select from "react-select";
 
-// TODO: change this out
 const tempTimeZone = [
   { value: "1", label: "Option 1" },
   { value: "2", label: "Option 2" },

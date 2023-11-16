@@ -1,19 +1,21 @@
 import React from "react";
 import type { Metadata } from "next";
 
+// components
+import UserProfileDeleteSection from "@/components/user/UserProfileDeleteSection";
+import UserProfileAccountSettingsSection from "@/components/user/UserProfileAccountSettingsSection";
+import UserProfileNotificationSection from "@/components/user/UserProfileNotificationSection";
+// import UserProfileThemeSection from "@/components/user/UserProfileThemeSection";
+
+// context or stores
+
+// constants and functions
 import { COMPANY_META_DESCRIPTION, COMPANY_NAME } from "@/constants/staticText";
 
 export const metadata: Metadata = {
   title: `${COMPANY_NAME} | Profile`,
   description: COMPANY_META_DESCRIPTION,
 };
-
-// components
-import UserProfileDeleteSection from "@/components/user/UserProfileDeleteSection";
-import UserProfileAccountSettingsSection from "@/components/user/UserProfileAccountSettingsSection";
-import UserProfileThemeSection from "@/components/user/UserProfileThemeSection";
-import UserProfileNotificationSection from "@/components/user/UserProfileNotificationSection";
-import UserProfileTimezoneSection from "@/components/user/UserProfileTimezoneSection";
 
 export default function UserProfile() {
   return (
@@ -34,10 +36,7 @@ export default function UserProfile() {
           <UserProfileNotificationSection />
 
           {/* light and dark theme */}
-          <UserProfileThemeSection />
-
-          {/* timezone settings */}
-          {/* <UserProfileTimezoneSection /> */}
+          {/* <UserProfileThemeSection /> */}
 
           {/* delete account */}
           <UserProfileDeleteSection />
