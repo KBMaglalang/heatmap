@@ -33,16 +33,6 @@ ConsistChart offers users a powerful visual representation of their habits over 
 - next-auth: Guarantees secure user authentication.
 - react-apexcharts: for heatmap creation
 
-### Future Implementations:
-
-I hope to implement these other features over time:
-
-- [ ] Update the tooltip to show the commits for the day
-- [ ] Add statistics to your consistency graph
-- [ ] Add timezone information
-- [ ] Light and Dark mode
-- [ ] Send notifications
-
 ## Screenshots
 
 !['homepage'](doc/1-homepage.PNG)
@@ -55,6 +45,7 @@ I hope to implement these other features over time:
 !['deletChatModal'](doc/8-editModal.PNG)
 !['createNewPromptModal'](doc/9-newDataPoint.PNG)
 !['editPromptModal'](doc/10-profile%20page.PNG)
+!['boardPage'](doc/11.png)
 
 ## How to Install and Run
 
