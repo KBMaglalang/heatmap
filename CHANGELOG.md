@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/KBMaglalang/heatmap/compare/v0.1.1...v0.1.2) (2023-11-18)
+
+
+### Features
+
+* show cursor pointer on board links ([fddad2a](https://github.com/KBMaglalang/heatmap/commit/fddad2a05fe15dfa932d550f72377164ca995619))
+
 ### [0.1.1](https://github.com/KBMaglalang/heatmap/compare/v0.1.0...v0.1.1) (2023-11-16)
 
 
