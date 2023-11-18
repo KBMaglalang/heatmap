@@ -111,12 +111,12 @@ export default function UserHeatmap({ id }: Props) {
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
               {isGraphsPage ? (
                 <Link href={`/user/graph/${id}`}>
-                  <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black font-brand-montserrat">
+                  <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black font-brand-montserrat hover:cursor-pointer">
                     {heatmapDoc?.data()?.title || "Title"}
                   </h1>
                 </Link>
               ) : (
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black font-brand-montserrat">
+                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black font-brand-montserrat ">
                   {heatmapDoc?.data()?.title || "Title"}
                 </h1>
               )}
