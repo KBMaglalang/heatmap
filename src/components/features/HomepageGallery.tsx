@@ -1,13 +1,14 @@
 import React from "react";
 
+// components
+import GalleryItem from "../common/GalleryItem";
+
+// constants
 import {
   GALLERY_TITLE,
   GALLERY_DESC,
   GALLERY_LIST,
 } from "@/constants/staticText";
-
-// components
-import GalleryItem from "../common/GalleryItem";
 
 function HomepageGallery() {
   return (

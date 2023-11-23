@@ -15,6 +15,14 @@ export default function EditModal({
   const [title, setTitle] = useState(heatmapDoc?.title);
   const [description, setDescription] = useState(heatmapDoc?.description);
 
+  /**
+   * The handleAccept function is a callback that is triggered when a button is clicked, and it
+   * prevents the default behavior, calls a callback function with the title and description as
+   * arguments, and sets the modalOpen state to false.
+   * @param e - React.MouseEvent<HTMLButtonElement, MouseEvent> - This is the event object that is
+   * passed when the button is clicked. It contains information about the event, such as the target
+   * element and the type of event (in this case, a mouse click).
+   */
   const handleAccept = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 

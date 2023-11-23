@@ -94,6 +94,10 @@ export default function UserHeatmap({ id }: Props) {
     );
   };
 
+  /* This code block is checking if the heatmap data is still loading (`heatmapLoading`), the dates data
+  is still loading (`datesLoading`), or if the user session is not available (`!session`). If any of
+  these conditions are true, it returns a loading spinner component to indicate that the data is still
+  being fetched. */
   if (heatmapLoading || datesLoading || !session) {
     return (
       <div className="h-full w-full">

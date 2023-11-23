@@ -27,36 +27,10 @@ export default function UserProfileTimezoneSection() {
 
         <Select
           isSearchable
-          // defaultValue={model}
           placeholder={"Timezone"}
           options={tempTimeZone}
-          // isLoading={isLoading}
           menuPosition="fixed"
           className="mt-2 w-1/3 font-brand-montserrat font-regular"
-          // styles={{
-          //   control: (baseStyles) => ({
-          //     ...baseStyles,
-          //     backgroundColor: "#212121",
-          //     borderColor: "#212121",
-          //   }),
-          //   option: (baseStyles) => ({
-          //     ...baseStyles,
-          //     backgroundColor: "#212121",
-          //     color: "#fff",
-          //   }),
-          //   input: (baseStyles) => ({
-          //     ...baseStyles,
-          //     color: "#fff",
-          //   }),
-          //   placeholder: (baseStyles) => ({
-          //     ...baseStyles,
-          //     color: "#fff",
-          //   }),
-          //   singleValue: (baseStyles) => ({
-          //     ...baseStyles,
-          //     color: "#fff",
-          //   }),
-          // }}
           onChange={handleTimezoneSelect}
         />
       </div>

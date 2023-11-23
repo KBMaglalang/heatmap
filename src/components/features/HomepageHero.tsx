@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
 
+// constants
 import { HERO_TITLE, HERO_DESC } from "@/constants/staticText";
 
 function HomepageHero() {
