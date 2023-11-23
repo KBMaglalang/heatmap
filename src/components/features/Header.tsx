@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-import { COMPANY_NAME } from "@/constants/staticText";
-
 // components
 import HeaderUserLogin from "./HeaderUserLogin";
+
+// constants and functions
+import { COMPANY_NAME } from "@/constants/staticText";
 
 function Header() {
   return (

@@ -15,6 +15,12 @@ export default function NewDataPointModal({
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  /**
+   * The handleAccept function is a callback that is triggered when a button is clicked, and it passes
+   * the title and description as arguments to a callback function before closing a modal.
+   * @param e - The parameter `e` is an event object of type `React.MouseEvent<HTMLButtonElement,
+   * MouseEvent>`. It represents the mouse event that triggered the function.
+   */
   const handleAccept = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 

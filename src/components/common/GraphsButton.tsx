@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
 import { ChartBarSquareIcon } from "@heroicons/react/24/outline";
 
 export default function GraphsButton() {

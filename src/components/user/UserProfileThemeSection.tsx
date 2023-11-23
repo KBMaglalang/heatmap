@@ -40,6 +40,8 @@ export default function UserProfileThemeSection() {
     }
   }, [session]);
 
+  /* The `useEffect` hook is used to perform side effects in a functional component. In this case, the
+  effect is triggered whenever the `themeToggle` state variable changes. */
   useEffect(() => {
     localStorage.setItem("theme", themeToggle ? "dark" : "light");
     const localTheme = localStorage.getItem("theme");

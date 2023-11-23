@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { toast } from "react-hot-toast";
 
+// constants or functions
 import { db } from "../../../firebase";
 
 export default function UserProfileAccountSettingsSection() {

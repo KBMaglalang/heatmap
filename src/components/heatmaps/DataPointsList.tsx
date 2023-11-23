@@ -29,8 +29,14 @@ export default function DataPointsList({ id }: Props) {
         orderBy("weekOfYear", "asc")
       )
   );
+  /* The line `const dateData = dates?.docs?.map((date) => date.data());` is creating a new variable
+  `dateData` and assigning it the value of the mapped array of `dates?.docs`. */
   const dateData = dates?.docs?.map((date) => date.data());
 
+  /* The code block `if (datesLoading || !session) {...}` is checking if the `datesLoading` variable is
+  true or if the `session` variable is falsey. If either of these conditions is true, it means that
+  the data is still loading or the user session is not available. In this case, the component
+  returns a loading spinner to indicate that the data is being fetched. */
   if (datesLoading || !session) {
     return (
       <div className="h-full w-full">

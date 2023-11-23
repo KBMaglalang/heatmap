@@ -9,6 +9,13 @@ export default function NewModal({ setModalOpen, callback }: Props) {
   const [heatmapTitle, setHeatmapTitle] = useState("");
   const [heatmapDesc, setHeatmapDesc] = useState("");
 
+  /**
+   * The handleAccept function is triggered when a button is clicked and it calls a callback function
+   * with the title and description values, then closes a modal.
+   * @param e - React.MouseEvent<HTMLButtonElement, MouseEvent> - This is the event object that is passed
+   * when the button is clicked. It contains information about the event, such as the target element and
+   * the type of event.
+   */
   const handleAccept = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 

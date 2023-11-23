@@ -1,8 +1,10 @@
 import React from "react";
 
-import { FEATURE_TITLE, FEATURE_LIST } from "@/constants/staticText";
-
+// components
 import FeatureItem from "../common/FeatureItem";
+
+// constnats
+import { FEATURE_TITLE, FEATURE_LIST } from "@/constants/staticText";
 
 function HomepageFeatureSection() {
   return (
