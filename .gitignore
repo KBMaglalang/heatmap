@@ -37,3 +37,4 @@ firebaseAdmin.json
 
 # local
 /ref
+cypress.env.json
