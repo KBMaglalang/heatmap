@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "release": "standard-version",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "test:e2e:open": "cypress open",
+    "test:e2e:run": "cypress run"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

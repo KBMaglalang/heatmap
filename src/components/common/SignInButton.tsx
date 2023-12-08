@@ -7,6 +7,7 @@ import { signIn } from "next-auth/react";
 export default function SignInButton() {
   return (
     <div
+      data-test="sign-in-button"
       onClick={() =>
         signIn("google", { callbackUrl: `${window.location.origin}/user` })
       }
