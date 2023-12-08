@@ -34,7 +34,9 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^10.0.1",
     "cypress": "^13.6.1",
+    "cypress-social-logins": "^1.14.1",
     "daisyui": "^4.0.7",
     "standard-version": "^9.5.0"
   }
