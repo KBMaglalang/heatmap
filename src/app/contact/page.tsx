@@ -24,7 +24,7 @@ export default function Contact() {
     <>
       <section className="text-brand-black body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col">
+          <div data-test="contact-header" className="flex flex-col">
             <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
               <h1 className="sm:w-full text-brand-black font-medium title-font text-2xl mb-2 sm:mb-0 font-brand-roboto">
                 {CONTACT_TITLE}
