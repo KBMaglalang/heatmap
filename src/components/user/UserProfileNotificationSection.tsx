@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { useSession } from "next-auth/react";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { toast } from "react-hot-toast";
+import React, { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { toast } from 'react-hot-toast';
 
 // components
 
 // context or store
 
 // constants and functions
-import { db } from "../../../firebase";
+import { db } from '../../../firebase';
 
 export default function UserProfileNotificationSection() {
   const { data: session } = useSession();
@@ -23,7 +23,7 @@ export default function UserProfileNotificationSection() {
     if (session) {
       const fetchAndSetUserData = async () => {
         // Define a reference to the user document in Firestore
-        const userRef = doc(db, "users", session?.user?.email!);
+        const userRef = doc(db, 'users', session?.user?.email!);
 
         // Fetch the user document
         const userDoc = await getDoc(userRef);
@@ -41,11 +41,11 @@ export default function UserProfileNotificationSection() {
   const handleNotificationToggle = async () => {
     const toggleState = !notificationsToggle;
 
-    toast.success(`Notifications ${toggleState ? "On" : "Off"}`);
+    toast.success(`Notifications ${toggleState ? 'On' : 'Off'}`);
 
     setNotificationsToggle(toggleState);
 
-    const userRef = doc(db, "users", session?.user?.email!);
+    const userRef = doc(db, 'users', session?.user?.email!);
     await updateDoc(userRef, {
       notification: toggleState,
     });
@@ -53,14 +53,14 @@ export default function UserProfileNotificationSection() {
 
   return (
     <div className="mb-12">
-      <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-        <h1 className="sm:text-3xl text-2xl font-medium  mb-2 text-brand-black font-brand-montserrat">
+      <div className="mb-10 flex w-full flex-col flex-wrap items-start text-center">
+        <h1 className="mb-2 font-brand-montserrat text-2xl  font-medium text-brand-black sm:text-3xl">
           Notifications
         </h1>
       </div>
 
-      <div className="flex flex-row justify-between items-center mt-2 w-full">
-        <span className="mr-4 text-xl font-brand-montserrat font-regular">
+      <div className="mt-2 flex w-full flex-row items-center justify-between">
+        <span className="font-regular mr-4 font-brand-montserrat text-xl">
           Enable Notifications
         </span>
 

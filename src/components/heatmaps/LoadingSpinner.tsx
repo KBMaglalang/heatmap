@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export default function LoadingSpinner() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex min-h-screen items-center justify-center">
       <span className="loading loading-dots loading-lg"></span>
     </div>
   );

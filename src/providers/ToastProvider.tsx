@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { Toaster } from "react-hot-toast";
+import React from 'react';
+import { Toaster } from 'react-hot-toast';
 
 export default function ToastProvider() {
   return (

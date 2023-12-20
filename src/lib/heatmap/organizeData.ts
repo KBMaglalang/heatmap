@@ -1,4 +1,4 @@
-import { DAYS } from "@/constants/heatmapText";
+import { DAYS } from '@/constants/heatmapText';
 
 type DateDocument = {
   createdAt: string;

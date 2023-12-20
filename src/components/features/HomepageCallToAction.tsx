@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
-import React from "react";
-import { signIn } from "next-auth/react";
+import React from 'react';
+import { signIn } from 'next-auth/react';
 
 // constants
-import { CTA_PITCH } from "@/constants/staticText";
+import { CTA_PITCH } from '@/constants/staticText';
 
 function HomepageCallToAction() {
   return (
-    <section className="text-brand-black body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className=" flex flex-col sm:flex-row sm:items-center items-center mx-auto">
-          <h1 className="flex-grow  text-2xl font-medium title-font text-brand-black font-brand-roboto ">
+    <section className="body-font text-brand-black">
+      <div className="container mx-auto px-5 py-24">
+        <div className=" mx-auto flex flex-col items-center sm:flex-row sm:items-center">
+          <h1 className="title-font  flex-grow font-brand-roboto text-2xl font-medium text-brand-black ">
             {CTA_PITCH}
           </h1>
 
           <button
             onClick={() =>
-              signIn("google", {
+              signIn('google', {
                 callbackUrl: `${window.location.origin}/user`,
               })
             }
-            className="flex-shrink-0 text-white bg-brand-interface border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0 font-brand-montserrat font-regular"
+            className="font-regular mt-10 flex-shrink-0 rounded border-0 bg-brand-interface px-8 py-2 font-brand-montserrat text-lg text-white hover:bg-indigo-600 focus:outline-none sm:mt-0"
           >
             Sign Up
           </button>

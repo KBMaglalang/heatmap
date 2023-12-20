@@ -1,44 +1,42 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 // components
-import HeaderUserLogin from "./HeaderUserLogin";
+import HeaderUserLogin from './HeaderUserLogin';
 
 // constants and functions
-import { COMPANY_NAME } from "@/constants/staticText";
+import { COMPANY_NAME } from '@/constants/staticText';
 
 function Header() {
   return (
-    <header className="text-brand-black body-font">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header className="body-font text-brand-black">
+      <div className="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
         <Link
           data-test="header-logo"
           href="/"
-          className="flex title-font font-medium items-center text-blue-900 mb-4 md:mb-0"
+          className="title-font mb-4 flex items-center font-medium text-blue-900 md:mb-0"
         >
-          <span className="ml-3 text-xl font-brand-roboto ">
-            {COMPANY_NAME}
-          </span>
+          <span className="ml-3 font-brand-roboto text-xl ">{COMPANY_NAME}</span>
         </Link>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+        <nav className="flex flex-wrap items-center justify-center text-base md:ml-4	md:mr-auto md:border-l md:border-gray-400 md:py-1 md:pl-4">
           <Link
             data-test="header-home"
-            href={"/"}
-            className="mr-5 hover:text-brand-black font-brand-montserrat"
+            href={'/'}
+            className="mr-5 font-brand-montserrat hover:text-brand-black"
           >
             Home
           </Link>
           <Link
             data-test="header-about"
-            href={"/about"}
-            className="mr-5 hover:text-brand-black font-brand-montserrat"
+            href={'/about'}
+            className="mr-5 font-brand-montserrat hover:text-brand-black"
           >
             About
           </Link>
           <Link
             data-test="header-contact"
-            href={"/contact"}
-            className="mr-5 hover:text-brand-black font-brand-montserrat"
+            href={'/contact'}
+            className="mr-5 font-brand-montserrat hover:text-brand-black"
           >
             Contact
           </Link>

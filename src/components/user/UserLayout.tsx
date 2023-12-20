@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 // components
-import Header from "../features/Header";
-import Footer from "../features/Footer";
+import Header from '../features/Header';
+import Footer from '../features/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ type Props = {
 
 function UserLayout({ children }: Props) {
   return (
-    <div className="flex flex-col h-screen max-w-screen">
+    <div className="max-w-screen flex h-screen flex-col">
       <Header />
       <div className="flex-grow">{children}</div>
       <Footer />

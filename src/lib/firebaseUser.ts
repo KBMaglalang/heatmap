@@ -1,12 +1,12 @@
-import { doc, getDoc, setDoc, Timestamp } from "firebase/firestore";
-import { db } from "../../firebase";
+import { doc, getDoc, setDoc, Timestamp } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 export async function ensureUserExists(session: any) {
   // If no session, return immediately
   if (!session) return;
 
   // Define a reference to the user document in Firestore
-  const userRef = doc(db, "users", session.user?.email!);
+  const userRef = doc(db, 'users', session.user?.email!);
 
   // Fetch the user document
   const userDoc = await getDoc(userRef);
@@ -19,7 +19,7 @@ export async function ensureUserExists(session: any) {
       createdAt: Timestamp.now(),
       notification: false,
       theme: false,
-      timezone: "",
+      timezone: '',
     };
     await setDoc(userRef, userData);
   }

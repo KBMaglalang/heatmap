@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { toast } from "react-hot-toast";
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { toast } from 'react-hot-toast';
 
 const validationSchema = Yup.object({
-  name: Yup.string().required("Required"),
-  email: Yup.string().email("Invalid email address").required("Required"),
-  message: Yup.string().required("Required"),
+  name: Yup.string().required('Required'),
+  email: Yup.string().email('Invalid email address').required('Required'),
+  message: Yup.string().required('Required'),
 });
 
 function HomepageContactForm() {
@@ -18,52 +18,52 @@ function HomepageContactForm() {
 
   const formik = useFormik({
     initialValues: {
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     },
     validationSchema,
 
     onSubmit: async (values) => {
       setLoading(true);
 
-      const response = await fetch("/api/contact", {
-        method: "POST",
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(values),
       });
 
       if (response.status === 200) {
-        toast.success("Message sent successfully");
+        toast.success('Message sent successfully');
         formik.resetForm();
         setLoading(false);
-        router.replace("/");
+        router.replace('/');
       } else {
-        toast.error("Failed to send message");
+        toast.error('Failed to send message');
         setLoading(false);
       }
     },
   });
 
   return (
-    <section className="text-brand-black body-font relative">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black font-brand-roboto">
+    <section className="body-font relative text-brand-black">
+      <div className="container mx-auto px-5 py-24">
+        <div className="mb-12 flex w-full flex-col text-center">
+          <h1 className="title-font mb-4 font-brand-roboto text-2xl font-medium text-brand-black sm:text-3xl">
             Contact Us
           </h1>
         </div>
         <form onSubmit={formik.handleSubmit}>
-          <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <div className="flex flex-wrap -m-2">
+          <div className="mx-auto md:w-2/3 lg:w-1/2">
+            <div className="-m-2 flex flex-wrap">
               {/* name */}
-              <div className="p-2 w-1/2">
+              <div className="w-1/2 p-2">
                 <div className="relative">
                   <label
                     htmlFor="name"
-                    className="leading-7 text-sm text-brand-black font-brand-montserrat font-light"
+                    className="font-brand-montserrat text-sm font-light leading-7 text-brand-black"
                   >
                     Name
                   </label>
@@ -76,23 +76,23 @@ function HomepageContactForm() {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.name}
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
+                    className="font-regular w-full rounded border border-gray-300 bg-gray-100 bg-opacity-50 px-3 py-1 font-brand-montserrat text-base leading-8 text-brand-black outline-none transition-colors duration-200 ease-in-out focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200"
                   />
                 </div>
 
                 {formik.touched.name && formik.errors.name ? (
-                  <div className="text-red-500 font-brand-montserrat font-regular">
+                  <div className="font-regular font-brand-montserrat text-red-500">
                     {formik.errors.name}
                   </div>
                 ) : null}
               </div>
 
               {/* email */}
-              <div className="p-2 w-1/2">
+              <div className="w-1/2 p-2">
                 <div className="relative">
                   <label
                     htmlFor="email"
-                    className="leading-7 text-sm text-brand-black font-brand-montserrat font-light"
+                    className="font-brand-montserrat text-sm font-light leading-7 text-brand-black"
                   >
                     Email
                   </label>
@@ -104,10 +104,10 @@ function HomepageContactForm() {
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                     placeholder="Email"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-brand-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
+                    className="font-regular w-full rounded border border-gray-300 bg-gray-100 bg-opacity-50 px-3 py-1 font-brand-montserrat text-base leading-8 text-brand-black outline-none transition-colors duration-200 ease-in-out focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200"
                   />
                   {formik.touched.email && formik.errors.email ? (
-                    <div className="text-red-500 font-brand-montserrat font-regular">
+                    <div className="font-regular font-brand-montserrat text-red-500">
                       {formik.errors.email}
                     </div>
                   ) : null}
@@ -115,11 +115,11 @@ function HomepageContactForm() {
               </div>
 
               {/* message */}
-              <div className="p-2 w-full">
+              <div className="w-full p-2">
                 <div className="relative">
                   <label
                     htmlFor="message"
-                    className="leading-7 text-sm text-brand-black font-brand-montserrat font-light"
+                    className="font-brand-montserrat text-sm font-light leading-7 text-brand-black"
                   >
                     Message
                   </label>
@@ -130,10 +130,10 @@ function HomepageContactForm() {
                     onBlur={formik.handleBlur}
                     value={formik.values.message}
                     placeholder="Type a message..."
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-brand-black py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out font-brand-montserrat font-regular"
+                    className="font-regular h-32 w-full resize-none rounded border border-gray-300 bg-gray-100 bg-opacity-50 px-3 py-1 font-brand-montserrat text-base leading-6 text-brand-black outline-none transition-colors duration-200 ease-in-out focus:border-brand-interface focus:bg-white focus:ring-2 focus:ring-indigo-200"
                   />
                   {formik.touched.message && formik.errors.message ? (
-                    <div className="text-red-500 font-brand-montserrat font-regular">
+                    <div className="font-regular font-brand-montserrat text-red-500">
                       {formik.errors.message}
                     </div>
                   ) : null}
@@ -141,13 +141,13 @@ function HomepageContactForm() {
               </div>
 
               {/* submit button */}
-              <div className="p-2 w-full">
+              <div className="w-full p-2">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex mx-auto text-white bg-brand-interface border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                  className="mx-auto flex rounded border-0 bg-brand-interface px-8 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none"
                 >
-                  {loading ? "Sending..." : "Send Message"}
+                  {loading ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </div>

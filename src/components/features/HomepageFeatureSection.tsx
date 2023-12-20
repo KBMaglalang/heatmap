@@ -1,28 +1,24 @@
-import React from "react";
+import React from 'react';
 
 // components
-import FeatureItem from "../common/FeatureItem";
+import FeatureItem from '../common/FeatureItem';
 
 // constnats
-import { FEATURE_TITLE, FEATURE_LIST } from "@/constants/staticText";
+import { FEATURE_TITLE, FEATURE_LIST } from '@/constants/staticText';
 
 function HomepageFeatureSection() {
   return (
-    <section className="text-brand-black body-font">
-      <div className="container px-5 py-24 mx-auto">
+    <section className="body-font text-brand-black">
+      <div className="container mx-auto px-5 py-24">
         {/* title */}
-        <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-brand-black mb-20 font-brand-roboto">
+        <h1 className="title-font mb-20 text-center font-brand-roboto text-2xl font-medium text-brand-black sm:text-3xl">
           {FEATURE_TITLE}
         </h1>
 
         {/* benefits section */}
-        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+        <div className="-mx-4 -mb-10 -mt-4 flex flex-wrap space-y-6 sm:-m-4 md:space-y-0">
           {FEATURE_LIST.map((feature, index) => (
-            <FeatureItem
-              key={index}
-              title={feature.title}
-              description={feature.description}
-            />
+            <FeatureItem key={index} title={feature.title} description={feature.description} />
           ))}
         </div>
       </div>

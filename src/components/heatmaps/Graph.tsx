@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
-import dynamic from "next/dynamic";
-const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import React, { useEffect, useState, useRef } from 'react';
+import dynamic from 'next/dynamic';
+const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 // constants and functions
-import { organizeDateData } from "@/lib/heatmap/organizeData";
-import { CHART_OPTIONS } from "@/constants/heatmapText";
+import { organizeDateData } from '@/lib/heatmap/organizeData';
+import { CHART_OPTIONS } from '@/constants/heatmapText';
 
 type Props = {
   commitsData: any;
@@ -35,16 +35,16 @@ export default function Graph({ commitsData }: Props) {
     updateChartWidth();
 
     // Attach window resize event listener
-    window.addEventListener("resize", updateChartWidth);
+    window.addEventListener('resize', updateChartWidth);
 
     // Cleanup event listener on component unmount
-    return () => window.removeEventListener("resize", updateChartWidth);
+    return () => window.removeEventListener('resize', updateChartWidth);
   }, []);
 
   return (
     <div
       ref={containerRef}
-      className="relative flex flex-col md:items-center mx-auto px-4 my-4 z-10 overflow-x-scroll"
+      className="relative z-10 mx-auto my-4 flex flex-col overflow-x-scroll px-4 md:items-center"
     >
       <ApexChart
         type="heatmap"

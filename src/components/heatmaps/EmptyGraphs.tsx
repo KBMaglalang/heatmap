@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 // components
-import NewButton from "./NewButton";
+import NewButton from './NewButton';
 
 export default function EmptyGraphs() {
   return (
-    <div className="flex flex-col items-center justify-center h-full">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font text-center text-brand-black mb-20 font-brand-roboto">
+    <div className="flex h-full flex-col items-center justify-center">
+      <h1 className="title-font mb-20 text-center font-brand-roboto text-2xl font-medium text-brand-black sm:text-3xl">
         Create Graphs To Get Started!
       </h1>
       <NewButton />

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
   title: string;
@@ -7,25 +7,25 @@ type Props = {
 
 export default function FeatureItem({ title, description }: Props) {
   return (
-    <div className="p-4 md:w-1/3 flex">
-      <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-brand-interface mb-4 flex-shrink-0">
+    <div className="flex p-4 md:w-1/3">
+      <div className="mb-4 inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-brand-interface">
         <svg
           fill="none"
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          className="w-6 h-6"
+          className="h-6 w-6"
           viewBox="0 0 24 24"
         >
           <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
         </svg>
       </div>
       <div className="flex-grow pl-6">
-        <h2 className="text-brand-black text-lg title-font font-medium mb-2 font-brand-montserrat ">
+        <h2 className="title-font mb-2 font-brand-montserrat text-lg font-medium text-brand-black ">
           {title}
         </h2>
-        <p className="leading-relaxed text-base font-brand-montserrat font-regular">
+        <p className="font-regular font-brand-montserrat text-base leading-relaxed">
           {description}
         </p>
       </div>
