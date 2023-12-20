@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useSession } from "next-auth/react";
-import { collection, orderBy, query } from "firebase/firestore";
-import { useCollection } from "react-firebase-hooks/firestore"; // !
-import { db } from "../../../firebase";
+import React from 'react';
+import { useSession } from 'next-auth/react';
+import { collection, orderBy, query } from 'firebase/firestore';
+import { useCollection } from 'react-firebase-hooks/firestore'; // !
+import { db } from '../../../firebase';
 
 // components
-import UserHeatmap from "@/components/heatmaps/UserHeatmap";
-import LoadingSpinner from "./LoadingSpinner";
-import EmptyGraphs from "./EmptyGraphs";
+import UserHeatmap from '@/components/heatmaps/UserHeatmap';
+import LoadingSpinner from './LoadingSpinner';
+import EmptyGraphs from './EmptyGraphs';
 
 // context or store
 
@@ -26,8 +26,8 @@ export default function GraphsList() {
   const [heatmaps, loading, error] = useCollection(
     session &&
       query(
-        collection(db, "users", session?.user?.email!, "heatmaps"),
-        orderBy("createdAt", "desc")
+        collection(db, 'users', session?.user?.email!, 'heatmaps'),
+        orderBy('createdAt', 'desc')
       )
   );
 
@@ -40,9 +40,7 @@ export default function GraphsList() {
       {heatmaps?.empty && <EmptyGraphs />}
 
       {!heatmaps?.empty &&
-        heatmaps?.docs?.map((heatmap) => (
-          <UserHeatmap key={heatmap.id} id={heatmap.id} />
-        ))}
+        heatmaps?.docs?.map((heatmap) => <UserHeatmap key={heatmap.id} id={heatmap.id} />)}
     </div>
   );
 }

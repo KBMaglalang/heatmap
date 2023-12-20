@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { TrashIcon } from "@heroicons/react/24/outline";
+import React, { useState } from 'react';
+import { TrashIcon } from '@heroicons/react/24/outline';
 
 // components
-import DeleteModal from "./DeleteModal";
+import DeleteModal from './DeleteModal';
 
 type Props = {
   callback: () => void;
@@ -17,9 +17,7 @@ export default function DeleteButton({ callback }: Props) {
         <TrashIcon className="h-6 w-6 text-gray-500 hover:text-gray-700 " />
       </div>
 
-      {showModal && (
-        <DeleteModal setModalOpen={setShowModal} callback={callback} />
-      )}
+      {showModal && <DeleteModal setModalOpen={setShowModal} callback={callback} />}
     </div>
   );
 }

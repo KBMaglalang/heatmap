@@ -1,11 +1,11 @@
-import type { NextAuthOptions } from "next-auth";
+import type { NextAuthOptions } from 'next-auth';
 // import CredentialsProvider from "next-auth/providers/credentials";
-import GoogleProvider from "next-auth/providers/google";
-import { ensureUserExists } from "./firebaseUser";
+import GoogleProvider from 'next-auth/providers/google';
+import { ensureUserExists } from './firebaseUser';
 
 export const authOptions: NextAuthOptions = {
   session: {
-    strategy: "jwt",
+    strategy: 'jwt',
   },
   providers: [
     GoogleProvider({
@@ -24,6 +24,6 @@ export const authOptions: NextAuthOptions = {
     },
   },
   theme: {
-    colorScheme: "light",
+    colorScheme: 'light',
   },
 };

@@ -1,12 +1,4 @@
-export const DAYS = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+export const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 export const CHART_OPTIONS = {
   stroke: {
@@ -75,26 +67,26 @@ export const CHART_OPTIONS = {
           {
             from: -30,
             to: 0,
-            color: "#cfcfcf",
-            name: "None",
+            color: '#cfcfcf',
+            name: 'None',
           },
           {
             from: 1,
             to: 20,
-            color: "#0404cc",
-            name: "Low",
+            color: '#0404cc',
+            name: 'Low',
           },
           {
             from: 21,
             to: 60,
-            color: "#00008B",
-            name: "Medium",
+            color: '#00008B',
+            name: 'Medium',
           },
           {
             from: 61,
             to: 100,
-            color: "#000059",
-            name: "High",
+            color: '#000059',
+            name: 'High',
           },
         ],
       },

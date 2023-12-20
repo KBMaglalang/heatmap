@@ -1,28 +1,24 @@
-import React from "react";
+import React from 'react';
 
 // components
-import GalleryItem from "../common/GalleryItem";
+import GalleryItem from '../common/GalleryItem';
 
 // constants
-import {
-  GALLERY_TITLE,
-  GALLERY_DESC,
-  GALLERY_LIST,
-} from "@/constants/staticText";
+import { GALLERY_TITLE, GALLERY_DESC, GALLERY_LIST } from '@/constants/staticText';
 
 function HomepageGallery() {
   return (
-    <section className="text-brand-black body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-brand-black font-brand-roboto ">
+    <section className="body-font text-brand-black">
+      <div className="container mx-auto px-5 py-24">
+        <div className="mb-20 flex w-full flex-col text-center">
+          <h1 className="title-font mb-4 font-brand-roboto text-2xl font-medium text-brand-black sm:text-3xl ">
             {GALLERY_TITLE}
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base font-brand-montserrat font-regular">
+          <p className="font-regular mx-auto font-brand-montserrat text-base leading-relaxed lg:w-2/3">
             {GALLERY_DESC}
           </p>
         </div>
-        <div className="flex flex-wrap -m-4">
+        <div className="-m-4 flex flex-wrap">
           {GALLERY_LIST.map((item, index) => (
             <GalleryItem
               key={index}

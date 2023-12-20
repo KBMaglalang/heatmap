@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { PlusCircleIcon } from "@heroicons/react/20/solid";
-import { useSession } from "next-auth/react";
-import { Timestamp, collection, addDoc } from "firebase/firestore";
+import React, { useState } from 'react';
+import { PlusCircleIcon } from '@heroicons/react/20/solid';
+import { useSession } from 'next-auth/react';
+import { Timestamp, collection, addDoc } from 'firebase/firestore';
 
 // components
-import NewModal from "./NewModal";
+import NewModal from './NewModal';
 
 // constants and functions
-import { db } from "../../../firebase";
+import { db } from '../../../firebase';
 
 export default function NewButton() {
   const { data: session } = useSession();
@@ -22,10 +22,10 @@ export default function NewButton() {
    * updated.
    */
   const handleUpdateSettings = async (data: any) => {
-    const doc = await addDoc(
-      collection(db, "users", session?.user?.email!, "heatmaps"),
-      { ...data, createdAt: Timestamp.now() }
-    );
+    const doc = await addDoc(collection(db, 'users', session?.user?.email!, 'heatmaps'), {
+      ...data,
+      createdAt: Timestamp.now(),
+    });
   };
 
   return (
@@ -34,9 +34,7 @@ export default function NewButton() {
         <PlusCircleIcon className="h-16 w-16 text-brand-interface hover:text-indigo-600 " />
       </div>
 
-      {showModal && (
-        <NewModal setModalOpen={setShowModal} callback={handleUpdateSettings} />
-      )}
+      {showModal && <NewModal setModalOpen={setShowModal} callback={handleUpdateSettings} />}
     </div>
   );
 }

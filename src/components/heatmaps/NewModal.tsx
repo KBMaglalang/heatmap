@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 type Props = {
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -6,8 +6,8 @@ type Props = {
 };
 
 export default function NewModal({ setModalOpen, callback }: Props) {
-  const [heatmapTitle, setHeatmapTitle] = useState("");
-  const [heatmapDesc, setHeatmapDesc] = useState("");
+  const [heatmapTitle, setHeatmapTitle] = useState('');
+  const [heatmapDesc, setHeatmapDesc] = useState('');
 
   /**
    * The handleAccept function is triggered when a button is clicked and it calls a callback function
@@ -28,46 +28,44 @@ export default function NewModal({ setModalOpen, callback }: Props) {
   };
 
   return (
-    <div className="overflow-y-auto fixed inset-0 z-50">
+    <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* handles clicks outside the modal box */}
       <div
-        className="fixed inset-0 w-full h-full bg-brand-black opacity-40"
+        className="fixed inset-0 h-full w-full bg-brand-black opacity-40"
         onClick={(e) => setModalOpen(false)}
       ></div>
 
       {/* modal box */}
-      <div className="flex items-center px-4 py-8 min-h-screen">
-        <div className="relative w-full max-w-lg p-4 mx-auto rounded-md shadow-2xl bg-white shadow-gray-700">
+      <div className="flex min-h-screen items-center px-4 py-8">
+        <div className="relative mx-auto w-full max-w-lg rounded-md bg-white p-4 shadow-2xl shadow-gray-700">
           {/* settings input or logout */}
           <div className="mt-3">
-            <div className="flex flex-col mt-2  text-brand-black">
-              <h4 className="mb-2 text-xl font-medium text-center text-brand-black font-brand-roboto">
+            <div className="mt-2 flex flex-col  text-brand-black">
+              <h4 className="mb-2 text-center font-brand-roboto text-xl font-medium text-brand-black">
                 Create New HeatMap
               </h4>
 
               {/* edit title */}
-              <div className="flex flex-col mt-2 w-full text-brand-black">
-                <span className="mr-4 text-xl  font-brand-montserrat font-medium">
-                  Title:
-                </span>
+              <div className="mt-2 flex w-full flex-col text-brand-black">
+                <span className="mr-4 font-brand-montserrat  text-xl font-medium">Title:</span>
                 <input
                   type="text"
-                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none border-2 text-brand-black font-brand-montserrat"
+                  className="my-2 resize-none  rounded-lg border-2  p-2 font-brand-montserrat text-brand-black focus:outline-none"
                   placeholder="Title"
                   value={heatmapTitle}
                   onChange={(e) => setHeatmapTitle(e.target.value)}
                 />
               </div>
               {/* edit description */}
-              <div className="flex flex-col mt-2 w-full">
-                <span className="mr-4 text-xl  text-brand-black font-brand-montserrat font-medium">
+              <div className="mt-2 flex w-full flex-col">
+                <span className="mr-4 font-brand-montserrat  text-xl font-medium text-brand-black">
                   Description:
                 </span>
                 <textarea
                   value={heatmapDesc}
                   onChange={(e) => setHeatmapDesc(e.target.value)}
                   rows={8}
-                  className="p-2 my-2  rounded-lg resize-none  focus:outline-none  border-2 text-brand-black font-brand-montserrat"
+                  className="my-2 resize-none  rounded-lg border-2  p-2  font-brand-montserrat text-brand-black focus:outline-none"
                   placeholder="Description"
                 />
               </div>
@@ -75,15 +73,15 @@ export default function NewModal({ setModalOpen, callback }: Props) {
           </div>
 
           {/* user selection */}
-          <div className="gap-2 items-center mt-3 sm:flex">
+          <div className="mt-3 items-center gap-2 sm:flex">
             <button
-              className="w-full mt-2 p-2.5 flex-1 text-white bg-brand-interface rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-indigo-600 font-brand-montserrat font-medium"
+              className="mt-2 w-full flex-1 rounded-md bg-brand-interface p-2.5 font-brand-montserrat font-medium text-white outline-none ring-indigo-600 ring-offset-2 hover:bg-indigo-600 focus:ring-2"
               onClick={handleAccept}
             >
               Accept
             </button>
             <button
-              className="w-full mt-2 p-2.5 flex-1 text-brand-black  rounded-md outline-none border ring-offset-2 ring-indigo-600 focus:ring-2 hover:bg-gray-200 font-brand-montserrat font-medium"
+              className="mt-2 w-full flex-1 rounded-md border  p-2.5 font-brand-montserrat font-medium text-brand-black outline-none ring-indigo-600 ring-offset-2 hover:bg-gray-200 focus:ring-2"
               onClick={(e) => setModalOpen(false)}
             >
               Cancel

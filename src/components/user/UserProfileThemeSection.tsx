@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { useSession } from "next-auth/react";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import React, { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 
 // components
 
 // context or store
 
 // constants and functions
-import { db } from "../../../firebase";
+import { db } from '../../../firebase';
 
 export default function UserProfileThemeSection() {
   const { data: session } = useSession();
@@ -17,8 +17,8 @@ export default function UserProfileThemeSection() {
 
   // set theme on initial load
   useEffect(() => {
-    const localTheme = localStorage.getItem("theme");
-    localTheme && setThemeToggle(localTheme === "dark" ? true : false);
+    const localTheme = localStorage.getItem('theme');
+    localTheme && setThemeToggle(localTheme === 'dark' ? true : false);
   }, []);
 
   /**
@@ -28,7 +28,7 @@ export default function UserProfileThemeSection() {
     if (session) {
       const fetchAndSetUserData = async () => {
         // Define a reference to the user document in Firestore
-        const userRef = doc(db, "users", session?.user?.email!);
+        const userRef = doc(db, 'users', session?.user?.email!);
 
         // Fetch the user document
         const userDoc = await getDoc(userRef);
@@ -43,12 +43,12 @@ export default function UserProfileThemeSection() {
   /* The `useEffect` hook is used to perform side effects in a functional component. In this case, the
   effect is triggered whenever the `themeToggle` state variable changes. */
   useEffect(() => {
-    localStorage.setItem("theme", themeToggle ? "dark" : "light");
-    const localTheme = localStorage.getItem("theme");
+    localStorage.setItem('theme', themeToggle ? 'dark' : 'light');
+    const localTheme = localStorage.getItem('theme');
 
-    const htmlElement = document.querySelector("html");
+    const htmlElement = document.querySelector('html');
     if (htmlElement) {
-      htmlElement.setAttribute("data-theme", localTheme!);
+      htmlElement.setAttribute('data-theme', localTheme!);
     }
   }, [themeToggle]);
 
@@ -60,7 +60,7 @@ export default function UserProfileThemeSection() {
 
     setThemeToggle(toggleState);
 
-    const userRef = doc(db, "users", session?.user?.email!);
+    const userRef = doc(db, 'users', session?.user?.email!);
     await updateDoc(userRef, {
       theme: toggleState,
     });
@@ -68,16 +68,14 @@ export default function UserProfileThemeSection() {
 
   return (
     <div className="mb-12">
-      <div className="flex flex-wrap w-full mb-10 flex-col items-start text-center">
-        <h1 className="sm:text-3xl text-2xl font-medium  mb-2 text-brand-black font-brand-montserrat">
+      <div className="mb-10 flex w-full flex-col flex-wrap items-start text-center">
+        <h1 className="mb-2 font-brand-montserrat text-2xl  font-medium text-brand-black sm:text-3xl">
           Theme
         </h1>
       </div>
 
-      <div className="flex flex-row justify-between items-center my-2 w-full">
-        <span className="mr-4 text-xl font-brand-montserrat font-regular">
-          Light or Dark Mode
-        </span>
+      <div className="my-2 flex w-full flex-row items-center justify-between">
+        <span className="font-regular mr-4 font-brand-montserrat text-xl">Light or Dark Mode</span>
 
         <div className="form-control">
           <label className="label cursor-pointer">

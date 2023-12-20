@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { PlusCircleIcon } from "@heroicons/react/20/solid";
-import { DocumentData } from "firebase/firestore";
+import React, { useState } from 'react';
+import { PlusCircleIcon } from '@heroicons/react/20/solid';
+import { DocumentData } from 'firebase/firestore';
 
 // components
-import NewDataPointModal from "./NewDataPointModal";
+import NewDataPointModal from './NewDataPointModal';
 
 type Props = {
   heatmapDoc: DocumentData | undefined;

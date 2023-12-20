@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useSession } from "next-auth/react";
-import { useCollection } from "react-firebase-hooks/firestore";
-import { collection, query, orderBy } from "firebase/firestore";
+import React from 'react';
+import { useSession } from 'next-auth/react';
+import { useCollection } from 'react-firebase-hooks/firestore';
+import { collection, query, orderBy } from 'firebase/firestore';
 
 // components
-import LoadingSpinner from "./LoadingSpinner";
-import DataPointListItem from "./DataPointListItem";
+import LoadingSpinner from './LoadingSpinner';
+import DataPointListItem from './DataPointListItem';
 
 // context or store
 
 // constants and functions
-import { db } from "../../../firebase";
+import { db } from '../../../firebase';
 
 type Props = {
   id: string;
@@ -25,8 +25,8 @@ export default function DataPointsList({ id }: Props) {
   const [dates, datesLoading, datesmapError] = useCollection(
     session &&
       query(
-        collection(db, "users", session?.user?.email!, "heatmaps", id, "dates"),
-        orderBy("weekOfYear", "asc")
+        collection(db, 'users', session?.user?.email!, 'heatmaps', id, 'dates'),
+        orderBy('weekOfYear', 'asc')
       )
   );
   /* The line `const dateData = dates?.docs?.map((date) => date.data());` is creating a new variable
@@ -46,15 +46,15 @@ export default function DataPointsList({ id }: Props) {
   }
 
   return (
-    <section className="container px-5 pt-24 mx-auto rounded-2xl text-gray-800 body-font pb-24">
+    <section className="body-font container mx-auto rounded-2xl px-5 pb-24 pt-24 text-gray-800">
       {/* title  */}
-      <div className="flex flex-wrap w-full mb-20">
-        <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-brand-black font-brand-montserrat">
+      <div className="mb-20 flex w-full flex-wrap">
+        <div className="mb-6 w-full lg:mb-0 lg:w-1/2">
+          <h1 className="title-font mb-2 font-brand-montserrat text-2xl font-medium text-brand-black sm:text-3xl">
             Data Points
           </h1>
 
-          <div className="h-1 w-20 bg-brand-accent rounded"></div>
+          <div className="h-1 w-20 rounded bg-brand-accent"></div>
         </div>
       </div>
 
@@ -71,23 +71,21 @@ export default function DataPointsList({ id }: Props) {
           </thead>
           <tbody>
             {dateData &&
-              dateData?.map((date: any) => (
-                <DataPointListItem key={date.createdAt} date={date} />
-              ))}
+              dateData?.map((date: any) => <DataPointListItem key={date.createdAt} date={date} />)}
 
             {!dateData?.length && (
               <tr className="">
                 {/* week of the year */}
-                <th>{""}</th>
+                <th>{''}</th>
 
                 {/* created at timestamp */}
-                <th> {""}</th>
+                <th> {''}</th>
 
                 {/* title */}
-                <th className="overflow-hidden">{"No Data"}</th>
+                <th className="overflow-hidden">{'No Data'}</th>
 
                 {/* description */}
-                <th>{""}</th>
+                <th>{''}</th>
               </tr>
             )}
           </tbody>
